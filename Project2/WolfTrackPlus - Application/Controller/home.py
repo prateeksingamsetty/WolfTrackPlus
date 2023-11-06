@@ -52,7 +52,6 @@ def loginUser():
     session["email"] = request.form["username"]
     password = request.form["password"]
     result = user.get(session["email"], password)
-    print(result)
     error = ""
     if result == 0:
         error = "Email does not exits. Please enter a valid email."
@@ -80,7 +79,10 @@ def signup():
     print(name)
     gender = request.form["gender"]
     location = request.form["location"]
+    print("user ")
+    print(user)
     result = user.post(name, session["email"], password, gender, location)
+    print("result ", result)
     if result == 0:
         error = "This email already exists. Please try with different email"
         return render_template("login.html", emailError=error)

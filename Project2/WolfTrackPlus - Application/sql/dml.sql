@@ -19,12 +19,17 @@
 -- Dumping data for table `roles`
 --
 --SIGNUP stored procedure creating the user and inserting the user in corresponding table
+
+DELIMITER $$
+
 CREATE DEFINER=`admin`@`%` PROCEDURE `CreateUser`(IN email varchar(256),IN name varchar(256),IN password varchar(256),IN gender varchar(256),IN location varchar(256))
 BEGIN
 	INSERT INTO `user_login`(password) values(password);
     SET @last_id_in_user_login = LAST_INSERT_ID();
 	INSERT INTO `user`(user_id,email,full_name,gender,location) values(@last_id_in_user_login,email,name,gender,location);
-END
+END$$
+
+DELIMITER ;
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
@@ -96,20 +101,20 @@ UNLOCK TABLES;
 -- Dumping data for table `recruiter`
 --
 
-LOCK TABLES `recruiter` WRITE;
-/*!40000 ALTER TABLE `recruiter` DISABLE KEYS */;
-/*!40000 ALTER TABLE `recruiter` ENABLE KEYS */;
-UNLOCK TABLES;
+-- LOCK TABLES `recruiter` WRITE;
+-- /*!40000 ALTER TABLE `recruiter` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `recruiter` ENABLE KEYS */;
+-- UNLOCK TABLES;
 
 
---
--- Dumping data for table `user_details`
---
+-- --
+-- -- Dumping data for table `user_details`
+-- --
 
-LOCK TABLES `user_details` WRITE;
-/*!40000 ALTER TABLE `user_details` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_details` ENABLE KEYS */;
-UNLOCK TABLES;
+-- LOCK TABLES `user_details` WRITE;
+-- /*!40000 ALTER TABLE `user_details` DISABLE KEYS */;
+-- /*!40000 ALTER TABLE `user_details` ENABLE KEYS */;
+-- UNLOCK TABLES;
 
 --
 -- Dumping data for table `user_login`
@@ -117,7 +122,8 @@ UNLOCK TABLES;
 
 LOCK TABLES `user_login` WRITE;
 /*!40000 ALTER TABLE `user_login` DISABLE KEYS */;
-INSERT INTO `user_login` (`id`, `user_id`, `password`) VALUES (1,1,'admin');
+-- INSERT INTO `user_login` (`id`, `user_id`, `password`) VALUES (1,1,'admin');
+INSERT INTO `user_login` (`user_id`, `password`) VALUES (1,'admin');
 /*!40000 ALTER TABLE `user_login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -1,4 +1,5 @@
 import pymysql
+import traceback
 import os
 
 
@@ -19,15 +20,21 @@ class sql_helper:
         """
         try:
             self.connection_obj = pymysql.connect(
-                host="http://database-1.cjzkwewltsjb.us-east-2.rds.amazonaws.com",
+                # host="http://database-1.cjzkwewltsjb.us-east-2.rds.amazonaws.com",
+                host="database-1.cert8noaobae.us-east-2.rds.amazonaws.com",
                 port=3306,
-                user="WolfaTrack",
-                password="n1rjbhPukoiFDtYV7sjJ",
-                db="wolftrack",
+                user="admin",
+                password="admin123",
+                db="wolftrack_se",
                 autocommit=True,
             )
-        except:
-            pass
+        except pymysql.Error as e:
+            # Handle the exception
+            print("Error: Could not connect to the database")
+            print("Error Details:", str(e))
+            traceback.print_exc()  # Print detailed error information
+        # except:
+        #     pass
             # Need to import error handling class
 
     def disconnect_database(self):
