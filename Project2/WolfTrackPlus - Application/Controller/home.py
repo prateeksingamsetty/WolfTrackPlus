@@ -75,20 +75,20 @@ def signup():
     name = request.form["name"]
     session["email"] = request.form["email"]
     password = request.form["password"]
-    # result = user.post(name, session['email'], password)
     print(name)
     gender = request.form["gender"]
     location = request.form["location"]
-    print("user ")
-    print(user)
     result = user.post(name, session["email"], password, gender, location)
-    print("result ", result)
     if result == 0:
         error = "This email already exists. Please try with different email"
         return render_template("login.html", emailError=error)
-    data = {}
-    data["full_name"] = name
-    return render_template("home.html", data=data, upcoming_events=upcoming_events)
+    # data = {
+    #     "full_name": name,
+    #     "gender": gender,
+    #     "location": location
+    # }
+    # return render_template("home.html", data=data, upcoming_events=upcoming_events)
+    return redirect("/auth")
 
 
 @home_route.route("/view", methods=["GET"])
