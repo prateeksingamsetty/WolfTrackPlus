@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Blueprint, flash, session
 from flask import Flask, render_template, url_for, request
 from flask_login import login_required, logout_user, login_manager
@@ -5,6 +6,19 @@ from werkzeug.utils import redirect
 from Controller.user_controller import User
 from Controller.application_controller import Application
 from Controller.email_framework import *
+import requests
+
+api_key = '68188bd34eea4250107ae82ee6d61054'
+app_id = '394232b1'
+adzuna_api_url = 'https://api.adzuna.com/v1/api/jobs/us/search/1'
+search_params = {
+    'app_id': app_id,
+    'app_key': api_key,
+    'what': 'software engineer',  # Modify the search parameters
+    'where': 'united states',      # Modify the location
+    'content-type': 'application/json',
+    'results_per_page': 40
+}
 
 home_route = Blueprint("home_route", __name__)
 
@@ -12,13 +26,27 @@ user = User()
 application = Application()
 # login = login_manager.LoginManager(application)
 
-upcoming_events = [
-    {"duedate": "10th Dec, 2021", "company": "Apple"},
-    {"duedate": "12th Dec, 2021", "company": "Microsoft"},
-    {"duedate": "15th Dec, 2021", "company": "Amazon"},
-    {"duedate": "21st Dec, 2021", "company": "Amazon"},
-    {"duedate": "21st Dec, 2021", "company": "Amazon"},
-]
+
+def fetch_upcoming_events_temp():
+    response = requests.get(adzuna_api_url, params=search_params)
+    upcoming_events_temp = []
+    if response.status_code == 200:
+        job_listings = response.json()
+        for job in job_listings['results']:
+            dic = {}
+            dic["title"] = job['title']
+            dic["company"] = job['company']['display_name']
+            dic["location"] = job['location']['display_name']
+            date = job['created']
+            year, month, day = datetime.strptime(
+                date, "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d").split('-')
+            combined_date = f"{year}-{month}-{day}"
+            dic["date_created"] = combined_date
+            salary_max = job.get('salary_max', 'N/A')
+            dic["salary"] = "$" + str(salary_max)
+            dic['job_url'] = job['redirect_url']
+            upcoming_events_temp.append(dic)
+    return upcoming_events_temp
 
 
 @home_route.route("/", methods=["GET"])
@@ -37,6 +65,8 @@ def auth():
     if "email" in session:
         data = user.get_auth_user_dao(session["email"])
         data["wishlist"] = application.get(session["email"], "")
+        response = requests.get(adzuna_api_url, params=search_params)
+        upcoming_events = fetch_upcoming_events_temp()
         return render_template("home.html", data=data, upcoming_events=upcoming_events)
     else:
         return redirect("/login")
@@ -61,7 +91,6 @@ def loginUser():
         return render_template("login.html", loginError=error)
     else:
         return redirect("/auth")
-        # return render_template('home.html', data=result, upcoming_events=upcoming_events)
 
 
 @home_route.route("/signup", methods=["POST"])
@@ -82,12 +111,6 @@ def signup():
     if result == 0:
         error = "This email already exists. Please try with different email"
         return render_template("login.html", emailError=error)
-    # data = {
-    #     "full_name": name,
-    #     "gender": gender,
-    #     "location": location
-    # }
-    # return render_template("home.html", data=data, upcoming_events=upcoming_events)
     return redirect("/auth")
 
 
@@ -104,7 +127,7 @@ def view():
     result_data = application.get(session["email"], application_category)
 
     print(result_data)
-
+    upcoming_events = fetch_upcoming_events_temp()
     return render_template(
         "view_list.html", data=result_data, upcoming_events=upcoming_events
     )
@@ -200,7 +223,6 @@ def delete_application():
         return render_template("home.html", jobAddError=error)
     data = {}
     return redirect("/auth")
-    # return render_template('home.html', data=data, upcoming_events=upcoming_events)
 
 
 @home_route.route("/edit_application", methods=["POST"])
