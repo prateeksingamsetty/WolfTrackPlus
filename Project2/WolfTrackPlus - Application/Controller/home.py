@@ -65,7 +65,6 @@ def auth():
     if "email" in session:
         data = user.get_auth_user_dao(session["email"])
         data["wishlist"] = application.get(session["email"], "")
-        response = requests.get(adzuna_api_url, params=search_params)
         upcoming_events = fetch_upcoming_events_temp()
         return render_template("home.html", data=data, upcoming_events=upcoming_events)
     else:
@@ -126,10 +125,13 @@ def view():
 
     result_data = application.get(session["email"], application_category)
 
-    print(result_data)
+    print("result_data ", result_data)
+    # base.html data
+    data = user.get_auth_user_dao(session["email"])
+    data["wishlist"] = application.get(session["email"], "")
     upcoming_events = fetch_upcoming_events_temp()
     return render_template(
-        "view_list.html", data=result_data, upcoming_events=upcoming_events
+        "view_list.html", data=data, result_data=result_data, upcoming_events=upcoming_events
     )
 
 
