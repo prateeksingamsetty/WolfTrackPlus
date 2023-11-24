@@ -19,15 +19,15 @@
 | Use of code formatters | 3   |  Nothing in GitHub. Might have used in VS Code  |
 | Use of syntax checkers | 3   | [syntaxchecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
 | Use of code coverage | 3   |  [DOI badge in readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)  |
-| Other automated analysis tools | 3   | 283   |
-| Test Cases Exist | 3   | 283   |
-| Test cases routinely executed | 3   | 283   |
-| The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | 3   | 283   |
-| Issues are discussed before closing | 3   | 283   |
-| Chat channles: exist | 3   | 283   |
-| Github Discussions | 3   | 283   |
-| Test cases: a large propotion of the issues related to handling failing cases | 3   | 283   |
-| Evidence that the whole team is using the same tools: everyone can get to all tools and files | 3   | 283   |
+| Other automated analysis tools | 3   | Config files in GitHub   |
+| Test Cases Exist | 3   | [UnitTesting Folder](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/UnitTesting)   |
+| Test cases routinely executed | 3   | [Testing Environment](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/test_env)   |
+| The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | 3   | [CONTRIBUTING.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/Project2/CONTRIBUTING.md)   |
+| Issues are discussed before closing | 3   | [Issues Page](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)  |
+| Chat channles: exist | 3   |    |
+| Github Discussions | 3   | [Issuesw Page](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Test cases: a large propotion of the issues related to handling failing cases | 3   | [Issues marked as bugs](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Evidence that the whole team is using the same tools: everyone can get to all tools and files | 3   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek)   |
 | Evidence that the whole team is using the same tools: eg:tutor can ask anyone to share the screen, they demonstrate the system running on their computer | N/A  | 283   |
 | Evidence that the members of the team are working accross multiple places in the code base | 3   | 283   |
 | Short release cycles | 3   | 283   |
