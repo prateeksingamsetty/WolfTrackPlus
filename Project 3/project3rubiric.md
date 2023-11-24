@@ -8,17 +8,17 @@
 | Number of commits: by different people | 3  | 283   |
 | Issues reported: There are many | 3   | 283   |
 | Issues are being closed | 3   | 283   |
-| DOI Badge: exists | 3   | 283   |
-| Docs: Docs generated, format not ugly | 3   | 283   |
-| Docs: What: point descriptions of each class/function(in isolaiton) | 3   | 283   |
+| DOI Badge: exists | 3   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
+| Docs: Docs generated, format not ugly | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Docs: What: point descriptions of each class/function(in isolaiton) | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Docs: How: for common use cases x,y,z mini tutorials showing examples on how to do x,y,z | 3   | 283   |
 | Docs: Why: docs tell a story, motivate the whole thing, deliver a punch line that makes you want to rush out and use the thing | 3   | 283   |
 | Docs: short video, animated, hosted on your repo. that convinces people why they want to work on your code. | 3   | 283   |
-| Use of version control tools | 3   | 283   |
-| Use of style checkers | 3   | 283   |
-| Use of code formatters | 3   | 283   |
-| Use of syntax checkers | 3   | 283   |
-| Use of code coverage | 3   | 283   |
+| Use of version control tools | 3   | [github repo](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek)   |
+| Use of style checkers | 3   | [stylechecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
+| Use of code formatters | 3   |  Nothing in GitHub. Might have used in VS Code  |
+| Use of syntax checkers | 3   | [syntaxchecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
+| Use of code coverage | 3   |  [DOI badge in readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)  |
 | Other automated analysis tools | 3   | 283   |
 | Test Cases Exist | 3   | 283   |
 | Test cases routinely executed | 3   | 283   |
