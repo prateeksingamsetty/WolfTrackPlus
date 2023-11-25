@@ -120,6 +120,53 @@ class application_dao:
         print(res)
         return res
 
+
+    def get_locations_for_application(self, email):
+        """
+        Fetches all job application locations for a specific user.
+        :param email: Email of the user
+        :return: List of job application locations
+        """
+        # Assuming you have a 'user_id' field in the 'application' table
+        user_id = self.__db.run_query(
+            "SELECT user_id FROM user WHERE email='" + email + "'"
+        )[0][0]
+
+        # Assuming 'location' is the field in your 'application' table
+        query = f"SELECT DISTINCT location FROM application WHERE user_id = {user_id}"
+        result = self.__db.run_query(query)
+
+        # Extract the locations from the result
+        locations = [row[0] for row in result]
+
+        return locations
+    
+
+    def get_company_names_for_application(self, email):
+        """
+        Fetches all distinct company names for a specific user's job applications.
+        :param email: Email of the user
+        :return: List of distinct company names
+        """
+        # Assuming you have a 'user_id' field in the 'user' table
+        user_id_query = f"SELECT user_id FROM user WHERE email = '{email}'"
+        user_id = self.__db.run_query(user_id_query)[0][0]
+
+        # Assuming 'company_name' is the field in your 'company' table
+        query = (
+        "SELECT DISTINCT company_name "
+        "FROM application "
+        "JOIN company ON company.company_id = application.company_id "
+        f"WHERE user_id = {user_id}"
+        )
+        result = self.__db.run_query(query)
+
+        # Extract the company names from the result
+        company_names = [row[0] for row in result]
+
+        return company_names
+
+
     def update_application(
         self,
         company_name,

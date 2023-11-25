@@ -186,22 +186,102 @@
         <!-- Map from Power BI -->
         <div>
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Job Application Map</h5>
-              <center>
-                <iframe height="220"
-                  src="https://app.powerbi.com/view?r=eyJrIjoiZTIwOGJkZjctNzYzMC00YjQyLTljMjQtZWUxM2Q3Y2ZlYjk0IiwidCI6IjgwZjIzZjRhLTkxYTQtNDU2Ni04ZGIxLTNiY2FiYjIxZDFjYiIsImMiOjF9"
-                  frameborder="0" allowFullScreen="false"></iframe>
-              </center>
-            </div>
-          </div>
+          <!-- Add this code to your home.html template -->
+
+<head>
+
+  <!-- Include Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+<!-- Include Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<div>
+  <h5 class="card-title">All Job Application Locations</h5>
+  <!-- Add a container for the map -->
+  <div id="map" style="height: 400px;"></div>
+
+  <!-- Add these hidden elements to store JSON data -->
+  <!-- Ensure that these elements are present in your HTML -->
+  
+
+  <!-- Include Leaflet CSS and JavaScript -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Keep the rest of your code as it is -->
+  <input type="hidden" id="jobLocationsData" value="{{ all_job_locations }}">
+  <input type="hidden" id="coordinatesListData" value="{{ coordinates_list }}">
+  <input type="hidden" id="all_companiesData" value="{{ all_companies }}">
+  <input type="hidden" id="coordinatesListData" value="{{ coordinates_list | tojson | safe }}">
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 2);
+    
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Retrieve job locations and coordinates from hidden elements
+        var jobLocationsDataElement = document.getElementById('jobLocationsData');
+        var coordinatesListDataElement = document.getElementById('coordinatesListData');
+        var companyListDataElement = document.getElementById('all_companiesData');
+        // Check if the elements are found
+        if (!jobLocationsDataElement || !coordinatesListDataElement ||  !all_companiesData) {
+          console.error('Hidden elements not found');
+          return;
+        }
+    
+        // Get the values from the hidden elements and parse JSON data
+        var jobLocationsData = jobLocationsDataElement.value;
+        var coordinatesListData = coordinatesListDataElement.value;
+        var companyListData = companyListDataElement.value;
+
+        try {
+          // Parse JSON data
+          var jobLocations = JSON.parse(jobLocationsData);
+          var coordinatesList = JSON.parse(coordinatesListData);
+          var companyList= JSON.parse(companyListData);
+          // Ensure the variables are arrays
+          jobLocations = Array.isArray(jobLocations) ? jobLocations : [];
+          companyList = Array.isArray(companyList) ? companyList : [];
+          coordinatesList = coordinatesList || {};
+    
+          // Check if jobLocations and coordinatesList are not null
+          for (var key in coordinatesList) {
+            if (coordinatesList.hasOwnProperty(key)) {
+              var coordinates = coordinatesList[key];
+              var location = jobLocations[key];
+              var companyname = companyList[key];
+              // Check if the coordinates have 'latitude' and 'longitude'
+              if (coordinates && coordinates.latitude !== undefined && coordinates.longitude !== undefined) {
+                console.log(location);
+                L.marker([coordinates.latitude, coordinates.longitude]).addTo(map)
+                  .bindPopup('<b>' + companyname + '</b><br>' + location);
+              } else {
+                console.error('Invalid coordinates for key ' + key, coordinates);
+              }
+            }
+          }
+        } catch (error) {
+          console.error('Error parsing JSON data:', error);
+        }
+      });
+    </script>
+    
+</div>
+
+
+
 
 
 
         </div>
-      </div>
-    </div>
 
 
 </body>

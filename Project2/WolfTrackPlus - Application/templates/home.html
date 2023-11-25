@@ -74,8 +74,59 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Location">Location</label>
-                                        <input type="text" name="location" class="form-control" id="Location"
-                                            placeholder="Enter Location" required="required" value="{{item.4}}">
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="JobProfile">Job Profile</label>
@@ -252,8 +303,59 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Location">Location</label>
-                                        <input type="text" name="location" class="form-control" id="Location"
-                                            placeholder="Enter Location" required="required" value="{{item.4}}">
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="JobProfile">Job Profile</label>
@@ -432,8 +534,59 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Location">Location</label>
-                                        <input type="text" name="location" class="form-control" id="Location"
-                                            placeholder="Enter Location" required="required" value="{{item.4}}">
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="JobProfile">Job Profile</label>
@@ -611,8 +764,59 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Location">Location</label>
-                                        <input type="text" name="location" class="form-control" id="Location"
-                                            placeholder="Enter Location" required="required" value="{{item.4}}">
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="JobProfile">Job Profile</label>
@@ -740,8 +944,59 @@
                     </div>
                     <div class="form-group">
                         <label for="Location">Location</label>
-                        <input type="text" name="location" class="form-control" id="Location"
-                            placeholder="Enter Location" required="required">
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                        <option value="" disabled selected>Select your location</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
                     </div>
                     <div class="form-group">
                         <label for="JobProfile">Job Profile</label>
@@ -823,8 +1078,59 @@
                     </div>
                     <div class="form-group">
                         <label for="Location">Location</label>
-                        <input type="text" name="location" class="form-control" id="Location"
-                            placeholder="Enter Location" required="required">
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="JobProfile">Job Profile</label>
@@ -906,8 +1212,59 @@
                     </div>
                     <div class="form-group">
                         <label for="Location">Location</label>
-                        <input type="text" name="location" class="form-control" id="Location"
-                            placeholder="Enter Location" required="required">
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="JobProfile">Job Profile</label>
@@ -990,8 +1347,59 @@
                     </div>
                     <div class="form-group">
                         <label for="Location">Location</label>
-                        <input type="text" name="location" class="form-control" id="Location"
-                            placeholder="Enter Location" required="required">
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="JobProfile">Job Profile</label>
@@ -1053,5 +1461,7 @@
     </div>
 </div>
 
-
 {% endblock content %}
+
+        
+          

@@ -22,6 +22,22 @@ class Application(Resource):
         :return: a string indicating the stock information and a string indicating cost of the product
         """
         return self.application.get_application(email, application_category)
+    
+    def get_job_locations_for_applications(self, email):
+        """
+        Fetches all job application locations for a specific user.
+        :param email: Email of the user
+        :return: List of job application locations
+        """
+        return self.application.get_locations_for_application(email)
+    
+    def get_job_companies_for_applications(self, email):
+        """
+        Fetches all job application companies for a specific user.
+        :param email: Email of the user
+        :return: List of job application companies
+        """
+        return self.application.get_company_names_for_application(email)
 
     # @login_required
     def post(

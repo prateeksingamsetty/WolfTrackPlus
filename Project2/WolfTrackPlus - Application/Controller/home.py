@@ -1,11 +1,14 @@
 from datetime import datetime
-from flask import Blueprint, flash, session
+import json
+from sqlite3 import IntegrityError
+from flask import Blueprint, flash, session,jsonify
 from flask import Flask, render_template, url_for, request
 from flask_login import login_required, logout_user, login_manager
 from werkzeug.utils import redirect
 from Controller.user_controller import User
 from Controller.application_controller import Application
 from Controller.email_framework import *
+from Controller.geocoding_helper import get_location_coordinates
 import requests
 
 api_key = '68188bd34eea4250107ae82ee6d61054'
@@ -60,13 +63,36 @@ def login():
 @home_route.route("/auth", methods=["GET"])
 def auth():
     """
-    redirects to home page after authentication, intercepts the get method.
+    Redirects to home page after authentication, intercepts the get method.
     """
     if "email" in session:
         data = user.get_auth_user_dao(session["email"])
         data["wishlist"] = application.get(session["email"], "")
+
+        all_job_locations = application.get_job_locations_for_applications(session["email"])
+        all_companies = application.get_job_companies_for_applications(session["email"])
+        print("all_job_locations",all_job_locations)
+        print("all_companies",all_companies)
+        # Fetch coordinates for each location
+        coordinates_list = []
+        for location in all_job_locations:
+            coordinates = get_location_coordinates(location)
+            if coordinates:
+                coordinates_list.append(coordinates)
+
+        print("coordinates_list",coordinates_list)
+
+
+       
         upcoming_events = fetch_upcoming_events_temp()
-        return render_template("home.html", data=data, upcoming_events=upcoming_events)
+        return render_template(
+            "home.html",
+            data=data,
+            upcoming_events=upcoming_events,
+            all_job_locations=json.dumps(all_job_locations),
+            coordinates_list=json.dumps(coordinates_list),
+            all_companies=json.dumps(all_companies)
+        )
     else:
         return redirect("/login")
 
@@ -94,23 +120,42 @@ def loginUser():
 
 @home_route.route("/signup", methods=["POST"])
 def signup():
-    """
-    Intercepts the post request when hit with the /signup URL.
-    This creates a new user for the application.
-    This reads input from the form contents such as name email password gender location
-    :return:
-    """
     name = request.form["name"]
     session["email"] = request.form["email"]
     password = request.form["password"]
-    print(name)
     gender = request.form["gender"]
     location = request.form["location"]
-    result = user.post(name, session["email"], password, gender, location)
-    if result == 0:
-        error = "This email already exists. Please try with different email"
+
+    try:
+        # Attempt to create a new user
+        result = user.post(name, session["email"], password, gender, location)
+
+        # Check if user creation was successful
+        if result == 0:
+            raise IntegrityError(f"A user with the email '{session['email']}' already exists. Please choose a different email.")
+
+        # Send registration email only if user creation is successful
+        registration_email_result = send_registration_email(name, session["email"])
+
+        # Check if email sending was successful
+        if not registration_email_result:
+            raise Exception("Failed to send registration email.")
+
+        # Render the success message or redirect to another page if needed
+        success_message = "User created successfully!"
+        return render_template("login.html", successMessage=success_message)
+
+    except IntegrityError as e:
+        # Handle the IntegrityError specifically for duplicate entry
+        error = f"A user with the email '{session['email']}' already exists. Please choose a different email."
         return render_template("login.html", emailError=error)
-    return redirect("/auth")
+
+    except Exception as e:
+        # Handle other exceptions
+        error = "An error occurred. A user with same username exists. Please choose a different email."
+        return render_template("login.html", emailError=error)
+ 
+    
 
 
 @home_route.route("/view", methods=["GET"])
@@ -125,7 +170,7 @@ def view():
 
     result_data = application.get(session["email"], application_category)
 
-    print("result_data ", result_data)
+    #("result_data ", result_data)
     # base.html data
     data = user.get_auth_user_dao(session["email"])
     data["wishlist"] = application.get(session["email"], "")
@@ -155,7 +200,7 @@ def add_new_application():
     notes = request.form["notes"]
     date_applied = request.form["dateApplied"]
     status = request.form["status"]
-    print("status", status)
+    #print("status", status)
     result = application.post(
         session["email"],
         company_name,
@@ -201,7 +246,7 @@ def change_status_application():
     """
     status = request.form["status_change"]
     application_id = request.form["application_id"]
-    print("status", status)
+    #print("status", status)
     result = application.change_status(application_id, status)
     if result == 0:
         error = "This job application could not be stored in the database. Please try again."
@@ -247,7 +292,7 @@ def edit_application():
     date_applied = request.form["dateApplied"]
     status = request.form["status"]
     application_id = request.form["application_id"]
-    print("status", status)
+    #print("status", status)
     result = application.update(
         company_name,
         location,

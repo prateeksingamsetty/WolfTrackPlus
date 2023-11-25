@@ -68,6 +68,49 @@ def s_email(
     return True
 
 
+# New function to send registration email
+def send_registration_email(name, email):
+    """
+    Send a registration email to the user.
+
+    :param name: Name of the user
+    :param email: Email address of the user
+    :return: Returns True if the email was sent successfully, False otherwise
+    """
+    sender_email = "wolftrackproject@gmail.com"  # Replace with your email address
+    receiver_email = email
+    password = "dlafyfekdkmdfjdi"  # Replace with your email password
+
+    subject = "Welcome to WolfTrack++ - Registration Successful"
+    body = (
+        f"Hello {name},\n\n"
+        "Thank you for registering with WolfTrack!\n"
+        "WolfTrack is a job application tracking system designed to help users efficiently manage and organize their job application process."
+        "We are excited to have you on board.\n\n"
+        "Best regards,\n"
+        "WolfTrack"
+    )
+
+    message = MIMEMultipart()
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    message["Subject"] = subject
+    message["Bcc"] = receiver_email
+
+    message.attach(MIMEText(body, "plain"))
+
+    text = message.as_string()
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, text)
+
+    return True
+
+    
+
+
 def status_change_email(application_id, email, status):
 
     sender_email = "wolftrackproject@gmail.com"
