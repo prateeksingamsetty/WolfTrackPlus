@@ -31,13 +31,13 @@
 | Evidence that the whole team is using the same tools: eg:tutor can ask anyone to share the screen, they demonstrate the system running on their computer | N/A  |    |
 | Evidence that the members of the team are working accross multiple places in the code base | 3   |  283  |
 | Short release cycles | 3   | [graphs](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/code-frequency)   |
-| Does your website and documentation provide a clear, high-level overview of your software? | Yes   | 283   |
-| Does your website clearly describe the type of user who should use your software? | Yes  | 283   |
-| Do you publish case studies to show how your software has been used by yourself and others? | Yes   | 283   |
-| Is the name of your project/software unique? | No   | 283   |
-| Is your project/software name free from trade mark violations? | No   | 283   |
-| Is your software available as a package that can be deployed without building it? | No   | 283   |
-| Is your software available for free? | Yes   | 283   |
+| Does your website and documentation provide a clear, high-level overview of your software? | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Does your website clearly describe the type of user who should use your software? | Yes  | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Do you publish case studies to show how your software has been used by yourself and others? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
+| Is the name of your project/software unique? | No   |    |
+| Is your project/software name free from trade mark violations? | No   |    |
+| Is your software available as a package that can be deployed without building it? | No   |    |
+| Is your software available for free? | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/laasya)   |
 | Is your source code available publicly to donwload, either as a downlaodable bundle or via access to a source code repository | Yes   | 283   |
 | Is your software hosted in an established third party repository like GitHub, BitBucket,LaunchPad or SourceForge | Yes   | 283   |
 | Is your documentation clearly available on your website or within your software | Yes   | 283   |
