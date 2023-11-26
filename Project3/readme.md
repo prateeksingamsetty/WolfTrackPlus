@@ -137,6 +137,7 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
 - **Sign Up Page**
   - User Interface to signup to the app
+    <p align="center"><img width="700" src="./Assets/Task Page.png"></p>
 ![image](https://user-images.githubusercontent.com/51504486/144655593-be1df836-fe47-420c-a6ce-112f31cddd2a.png)
 
 - **Login Page**
