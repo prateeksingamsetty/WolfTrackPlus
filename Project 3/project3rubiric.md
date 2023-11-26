@@ -6,8 +6,8 @@
 | But nevertheless, here is a track record that everyone is contributing a lot)| 3  | 283   |
 | Number of commits | 3   | 283   |
 | Number of commits: by different people | 3  | 283   |
-| Issues reported: There are many | 3   | 283   |
-| Issues are being closed | 3   | 283   |
+| Issues reported: There are many | 3   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Issues are being closed | 3   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
 | DOI Badge: exists | 3   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
 | Docs: Docs generated, format not ugly | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Docs: What: point descriptions of each class/function(in isolaiton) | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
