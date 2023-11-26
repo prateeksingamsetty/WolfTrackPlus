@@ -25,12 +25,12 @@
 | The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | 3   | [CONTRIBUTING.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/Project2/CONTRIBUTING.md)   |
 | Issues are discussed before closing | 3   | [Issues Page](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)  |
 | Chat channles: exist | 3   |    |
-| Github Discussions | 3   | [Issuesw Page](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Github Discussions | 3   | [Issues Page](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
 | Test cases: a large propotion of the issues related to handling failing cases | 3   | [Issues marked as bugs](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
-| Evidence that the whole team is using the same tools: everyone can get to all tools and files | 3   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek)   |
-| Evidence that the whole team is using the same tools: eg:tutor can ask anyone to share the screen, they demonstrate the system running on their computer | N/A  | 283   |
-| Evidence that the members of the team are working accross multiple places in the code base | 3   | 283   |
-| Short release cycles | 3   | 283   |
+| Evidence that the whole team is using the same tools: everyone can get to all tools and files | 3   | [requirements.txt](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/requirements.txt) is installed by everyone   |
+| Evidence that the whole team is using the same tools: eg:tutor can ask anyone to share the screen, they demonstrate the system running on their computer | N/A  |    |
+| Evidence that the members of the team are working accross multiple places in the code base | 3   |  283  |
+| Short release cycles | 3   | [graphs](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/code-frequency)   |
 | Does your website and documentation provide a clear, high-level overview of your software? | Yes   | 283   |
 | Does your website clearly describe the type of user who should use your software? | Yes  | 283   |
 | Do you publish case studies to show how your software has been used by yourself and others? | Yes   | 283   |
