@@ -111,8 +111,8 @@ class FlaskTest(unittest.TestCase):
     def test_edit_profile(self):
         with app.test_client(self) as c:
             with c.session_transaction() as sess:
-                sess["email"] = "swetha1189@gmail.com"
-                sess["password"] = "thanks123"
+                sess["email"] = "shivakandhagatla1999@gmail.com"
+                sess["password"] = "12345"
         response = c.post(
             "/edit_profile", data={"name": "sravya", "location": "Seattle"}
         )
@@ -121,8 +121,8 @@ class FlaskTest(unittest.TestCase):
     def test_edit_profile(self):
         with app.test_client(self) as c:
             with c.session_transaction() as sess:
-                sess["email"] = "ramyasaimullapudi@gmail.com"
-                sess["password"] = "mramyasai"
+                sess["email"] = "shivakandhagatla1999@gmail.com"
+                sess["password"] = "12345"
         response = c.post(
             "/edit_profile", data={"name": "Ramya Sai Mullapudi", "location": "NC"}
         )

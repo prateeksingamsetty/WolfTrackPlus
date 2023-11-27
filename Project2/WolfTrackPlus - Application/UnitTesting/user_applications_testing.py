@@ -1,29 +1,47 @@
-from flask.typing import StatusCode
-
 import unittest
-import sys, os, inspect
+from flask import Flask
+from flask_testing import TestCase
+from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+from your_flask_app import create_app, db
 
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
+class TestFlaskApp(TestCase):
 
-from main import app
+    def create_app(self):
+        app = create_app()
+        app.config['TESTING'] = True
+        app.config['WTF_CSRF_ENABLED'] = False  # Disable CSRF for testing
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'  # Use in-memory database
+        app.config['LOGIN_DISABLED'] = True  # Disable login for testing
 
-# Testing template
-class FlaskTest(unittest.TestCase):
+        return app
 
-    # check if response is 200
-    def test_(self):
-        pass
+    def setUp(self):
+        db.create_all()
 
-    # check if content returned is application/json
-    def test_index_content(self):
-        pass
+    def tearDown(self):
+        db.session.remove()
+        db.drop_all()
 
-    # check data returned
-    def test_index_data(self):
-        pass
+    def test_login(self):
+        response = self.client.get('/login')
+        self.assert200(response)
+        self.assert_template_used('login.html')
 
+    def test_auth_redirect_without_session(self):
+        response = self.client.get('/auth', follow_redirects=True)
+        self.assertRedirects(response, '/login')
 
-if __name__ == "__main__":
+    def test_auth_with_session(self):
+        with self.client:
+            with self.client.session_transaction() as session:
+                session['email'] = 'test@example.com'
+
+            response = self.client.get('/auth')
+            self.assert200(response)
+            self.assert_template_used('home.html')
+
+    # Add more test cases for other routes and functionalities
+
+if __name__ == '__main__':
     unittest.main()
