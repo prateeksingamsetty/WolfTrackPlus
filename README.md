@@ -1,6 +1,6 @@
-<h1 align= "center"><b>WolfTrackPlus</b></h1>
+<h1 align= "left"><b>WolfTrackPlus</b></h1>
 
-### Watch WolftrackPlus in Action
+### WolfTrack your job application tracker
 
 [Project 1 - Link](https://youtu.be/Z_OqqHXdwJ0)
 
@@ -44,19 +44,25 @@
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
 
 
-**Goal:**<br/>
+## Project Overview
 
-One stop shop for your very own personal Job-tracker application!
+### Objective
+Build a comprehensive Job-Tracker application.
 
-**Documentation:**<br/>
-Checkout our documentation for source code and test cases at https://wolftrackplus.readthedocs.io/en/latest/
+### Features
+Keep track of dates, notes, tasks, job details, salaries, locations, and valuable company insights to help users efficiently manage and organize their job application process.
 
-**Project Description:**
+### Explore
 
-Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job detail, we're talking about dates, notes, tasks, job descriptions, salaries, locations, company insight and more!
+[Documentation](https://wolftrackplus.readthedocs.io/en/latest/) Dive into the source code and test cases.
 
-**So, let's go get that job! 😎**
+### Getting Started
 
+[User Guide](https://wolftrackplus.readthedocs.io/en/latest/) Start using WolfTrack effectively.
+
+### Let's Conquer Together
+
+[GitHub Repository](https://github.com/prateeksingamsetty/WolfTrackPlus) Access the source code and contribute.
 
 
 <!-- 
@@ -71,25 +77,18 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 ![GitHub](https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717)
 ![MS SQL Server](http://img.shields.io/badge/-MS%20SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=ffffff) -->
 
-**Built Using:**
+### Built with:
 
-<code><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg"></a></code>
-<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg"></a></code>
-<code><a href="https://getbootstrap.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg"></a></code>
-<code><a href="https://www.javascript.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg"></a></code>
-<code><a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg"></a></code>
-<code><a href="https://www.mysql.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"></a></code>
-<code><a href="https://aws.amazon.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></a></code>
-<!-- <code><a href="https://git-scm.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></a></code>
-<code><a href="https://github.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg"></a></code> -->
-<!-- <code><a href="https://code.visualstudio.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-ar21.svg"></a></code>
-<code><a href="https://www.python.org/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></a></code>-->
+<code><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="80" height="80" /></code>
+<code><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg"></a></code>
+<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg"></a></code>
+<code><a href="https://getbootstrap.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg"></a></code>
+<code><a href="https://www.javascript.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg"></a></code>
+<code><a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg"></a></code>
+<code><a href="https://aws.amazon.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></a></code>
+<code><a href="https://www.mysql.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"></a></code>
+<code><a href="https://git-scm.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></a></code>
 
-<p align="center">
-<img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="150"> <img src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="150"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="150"> <img src="https://media.giphy.com/media/UWt0rhp21JgLwoeFQP/giphy.gif" width ="150"/> <img src="https://media.giphy.com/media/kH6CqYiquZawmU1HI6/giphy.gif" width ="150"/> 
-</p>
-
----
 
 ## Getting started:
 
@@ -228,27 +227,24 @@ For more detailed description - Check [Changes.md](https://github.com/ramyasaimu
 - [ ] Reading mails from your inbox and automatically adding/updating the status of the application
 - [ ] Enabling Desktop Notifications
 
-## Contributions to the Project
-Please refer to the [Contributing.md](https://github.com/salonishah01/WolfTrackPlus/blob/main/Project2/CONTRIBUTING.md) if you want to contrbute to the Wolftrack source code. Follow all the guidelines mentioned and raise a pull request for the developers to review before the code goes to the main source code.
-
 
 ## Contact 
-In case of any issues, please e-mail your queries to rushilvegada@gmail.com or raise an issue on this repository
+In case of any issues, please e-mail your queries to shivakandhagatla1999@gmail.com or raise an issue on this repository
 
-## Contributors:
+ ## Contributors
+   
+  <ul style="list-style-type:  '- ' ; padding: 0;">
+  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;">Shiva Vara Prasad Kandhagatla</a></li>
+  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;">Prateek Singamsetty</a></li>
+  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;">Laasya Choudary Nandamuri </a></li>
+  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;">Jayanth Ramanidharan</a></li>
+</ul>
 
-[Romil Shah](https://github.com/romil2807)
+ ## Contribution
+  
+  Please refer the CONTRIBUTING.md file for instructions on how to contribute to our repository.
 
-[Rushil Vegada](https://github.com/rushilv20)
-
-[Sahil Changlani](https://github.com/sahilchanglani)
-
-[Saloni Shah](https://github.com/salonishah01)
-
-## Previous Contributors:
-Ramya Sai Mullapudi <br/>
-Rohan Prabhune <br/>
-Krishna Saurabh Vankkad <br/>
-Arjun Madhusudan <br/>
-Lakshmi Swetha Gavini <br/>
-
+ ## License
+  
+  This project is licensed under the MIT License.
+  
