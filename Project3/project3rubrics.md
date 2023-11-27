@@ -4,8 +4,8 @@
 | Video | 3  | 283   |
 | Workload is spread over the whole team (one team member is often X times more productive than the others | 3   | [commits](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/commit-activity)   |
 | But nevertheless, here is a track record that everyone is contributing a lot)| 3  | [commits](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/commit-activity)   |
-| Number of commits | 3   |    |
-| Number of commits: by different people | 3  |    |
+| Number of commits | 3   |  28  |
+| Number of commits: by different people | 3  | Laasya: 11, Jayanth: 11, Prateek: 7, Shiva: 5   |
 | Issues reported: There are many | 3   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
 | Issues are being closed | 3   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
 | DOI Badge: exists | 3   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
