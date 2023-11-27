@@ -87,17 +87,17 @@
 | Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | Yes   |    |
 | Can users subscribe to notifications to changes to your source code repository? | Yes   |    |
 | If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model? | No   |    |
-| Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | Yes   | 283   |
-| Do you have a contributions policy? | Yes   | 283   |
-| Is your contributions' policy publicly available? | Yes   | 283   |
-| Do contributors keep the copyright/IP of their contributions? | No   | 283   |
-| Does your website and documentation clearly state the copyright owners of your software and documentation? | Yes   | 283   |
-| Does each of your source code files include a copyright statement? | No   | 283   |
-| Does your website and documentation clearly state the licence of your software? | Yes   | 283   |
-| Is your software released under an open source licence? | Yes   | 283   |
-| Is your software released under an OSI-approved open-source licence? | Yes   | 283   |
-|  Does each of your source code files include a licence header? | No   | 283   |
-| Do you have a recommended citation for your software? | No   | 283   |
-| Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? | Yes   | 283   |
-| Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? | No    | 283   |
-| Do you make timely announcements of the deprecation of components, APIs, etc.? | No   | 283   |
+| Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | Yes   |    |
+| Do you have a contributions policy? | Yes   | [CONTRIBUTING.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/Project2/CONTRIBUTING.md)   |
+| Is your contributions' policy publicly available? | Yes   | [CONTRIBUTING.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/Project2/CONTRIBUTING.md)   |
+| Do contributors keep the copyright/IP of their contributions? | No   |    |
+| Does your website and documentation clearly state the copyright owners of your software and documentation? | Yes   |    |
+| Does each of your source code files include a copyright statement? | No   |    |
+| Does your website and documentation clearly state the licence of your software? | Yes   |    |
+| Is your software released under an open source licence? | Yes   |    |
+| Is your software released under an OSI-approved open-source licence? | Yes   |    |
+|  Does each of your source code files include a licence header? | No   |    |
+| Do you have a recommended citation for your software? | No   |    |
+| Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? | Yes   |    |
+| Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? | No    |    |
+| Do you make timely announcements of the deprecation of components, APIs, etc.? | No   |    |
