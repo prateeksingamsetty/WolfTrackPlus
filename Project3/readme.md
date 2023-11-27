@@ -143,17 +143,20 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
   - User Interface to login to the Wolftrack app. After successful login, user will be redirected to the Dashboard page
 ![image](https://user-images.githubusercontent.com/51504486/144655666-a5d8eae0-efb2-4fd4-94da-b7dae79f588e.png)
 
-- **Dashboard** 
-  - The 4 section (Wishlist, Applied, In-process, Offers) categorizes all the applications based on the current status and shows 3 applications on the home page. The tool allows the user to create new applications by clicking on 'Add New' button while the 'View More' button allows the user to list applications in each section. For each section the user has three options:
-    1. Change the status of the application 
-    2. Edit the details of any application
-    3. Delete the application
-
-   ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Job_apply_feature.jpg)
+- **Dashboard**
+  
+ **Job Apply Feature**
 
 The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.
 
-  
+   ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Job_apply_feature.jpg)
+
+  **All Job Applications Locations Display**
+
+The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
+
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Application_Locations.jpg?raw=true)
+
 - **Edit User Profile** 
   - User has the option to edit profile
     ![image](https://user-images.githubusercontent.com/51504486/144659025-855057d1-2d20-4c89-b85c-96f4e952e86e.png)
