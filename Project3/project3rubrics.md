@@ -67,26 +67,26 @@
 | Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | Yes   | [main branch](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
 | Do you back-up your repository? | N/A   |    |
 | Do you provide publicly-available instructions for building your software from the source code? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
-| Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) | Yes   | 283   |
-|  Do you provide publicly-available instructions for deploying your software? | Yes   | 283   |
-| Does your documentation list all third-party dependencies? | Yes   | 283   |
-| Does your documentation list the version number for all third-party dependencies? | Yes   | 283   |
-| Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or | Yes   | 283   |
-| Can you download dependencies using a dependency management tool or package manager? e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) | Yes   | 283   |
-| Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | Yes   | 283   |
-| Do you have an automated test suite for your software? | Yes   | 283   |
-| Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | Yes   | 283   |
-| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | Yes   | 283   |
-| Are your test results publicly visible? | Yes   | 283   |
-| Are all manually-run tests documented? | Yes   | 283   |
-| Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? e.g. release announcements, publications, workshops, conference presentations | No   | 283   |
-| Does your website state how many projects and users are associated with your project? | N/A   | 283   |
-| Do you provide success stories on your website? | No  | 283   |
-| Do you list your important partners and collaborators on your website? | N/A   | 283   |
-| Do you list your project's publications on your website or link to a resource where these are available? | N/A   | 283   |
-| Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | Yes   | 283   |
-| Can users subscribe to notifications to changes to your source code repository? | Yes   | 283   |
-| If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model? | No   | 283   |
+| Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) | Yes   |    |
+|  Do you provide publicly-available instructions for deploying your software? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
+| Does your documentation list all third-party dependencies? | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Does your documentation list the version number for all third-party dependencies? | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Can you download dependencies using a dependency management tool or package manager? e.g. Ivy (http://ant.apache.org/ivy/), Maven (https://maven.apache.org/), Python pip (https://pypi.python.org/pypi/pip) or setuptools (https://pypi.python.org/pypi/setuptools), PHP Composer (https://getcomposer.org/), Ruby gems (https://rubygems.org), or R PackRat (https://rstudio.github.io/packrat/) | Yes   |    |
+| Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | Yes   |    |
+| Do you have an automated test suite for your software? | Yes   | [Testing Environment](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/test_env)   |
+| Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | Yes   | [Testing Environment](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/test_env)   |
+| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | Yes   | [UnitTesting Folder](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/UnitTesting)   |
+| Are your test results publicly visible? | Yes   |    |
+| Are all manually-run tests documented? | Yes   |    |
+| Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? e.g. release announcements, publications, workshops, conference presentations | No   |    |
+| Does your website state how many projects and users are associated with your project? | N/A   |    |
+| Do you provide success stories on your website? | No  |    |
+| Do you list your important partners and collaborators on your website? | N/A   |    |
+| Do you list your project's publications on your website or link to a resource where these are available? | N/A   |    |
+| Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | Yes   |    |
+| Can users subscribe to notifications to changes to your source code repository? | Yes   |    |
+| If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model? | No   |    |
 | Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | Yes   | 283   |
 | Do you have a contributions policy? | Yes   | 283   |
 | Is your contributions' policy publicly available? | Yes   | 283   |
