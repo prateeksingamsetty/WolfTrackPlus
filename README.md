@@ -6,6 +6,8 @@
 
 [Project 2 - Link](https://youtu.be/12VUntGWZys)
 
+[Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
+
 ### Version Tags
 
 **Version 1 tags:**<br/>
