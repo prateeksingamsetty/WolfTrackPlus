@@ -151,6 +151,8 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
     <p align="center"><img width="700" src="./Assets/Job_apply_feature"></p>
 
+The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.
+
   - The left-most section of the dashboard shows the User details. The user also has the option to edit his/her profile.
 
   - Upcoming Activities - The upcoming activities shows the top 5 activities nearing the deadline. The activities are picked up from the applications and the company name and the due date is displayed on this section. 
