@@ -137,7 +137,6 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
 - **Sign Up Page**
   - User Interface to signup to the app
-    <p align="center"><img width="700" src="./Assets/Task Page.png"></p>
 ![image](https://user-images.githubusercontent.com/51504486/144655593-be1df836-fe47-420c-a6ce-112f31cddd2a.png)
 
 - **Login Page**
@@ -149,8 +148,8 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
     1. Change the status of the application 
     2. Edit the details of any application
     3. Delete the application
-    
-    ![image](https://user-images.githubusercontent.com/51504486/144657864-12892f0c-e811-470e-81a8-ed13799b9808.png)
+
+    <p align="center"><img width="700" src="./Assets/Job_apply_feature"></p>
 
   - The left-most section of the dashboard shows the User details. The user also has the option to edit his/her profile.
 
