@@ -29,7 +29,7 @@
 | Test cases: a large propotion of the issues related to handling failing cases | 3   | [Issues marked as bugs](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
 | Evidence that the whole team is using the same tools: everyone can get to all tools and files | 3   | [requirements.txt](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/requirements.txt) is installed by everyone   |
 | Evidence that the whole team is using the same tools: eg:tutor can ask anyone to share the screen, they demonstrate the system running on their computer | N/A  |    |
-| Evidence that the members of the team are working accross multiple places in the code base | 3   |  283  |
+| Evidence that the members of the team are working accross multiple places in the code base | 3   |  branches in GitHub  |
 | Short release cycles | 3   | [graphs](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/code-frequency)   |
 | Does your website and documentation provide a clear, high-level overview of your software? | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Does your website clearly describe the type of user who should use your software? | Yes  | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
