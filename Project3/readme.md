@@ -147,7 +147,7 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
   
     - **Job Apply Feature**
 
-       The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can  browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.<br>
+       The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can  browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.<br>
       
 <br>
 
@@ -155,7 +155,7 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
    - **All Job Applications Locations Display**
       
-The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
+The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
 
 <br>
 
@@ -247,4 +247,3 @@ Rohan Prabhune <br/>
 Krishna Saurabh Vankkad <br/>
 Arjun Madhusudan <br/>
 Lakshmi Swetha Gavini <br/>
-
