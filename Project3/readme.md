@@ -149,16 +149,11 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
     2. Edit the details of any application
     3. Delete the application
 
-    <p align="center"><img width="700" src="./Assets/Job_apply_feature"></p>
+   ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Job_apply_feature.jpg)
 
 The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.
 
-  - The left-most section of the dashboard shows the User details. The user also has the option to edit his/her profile.
-
-  - Upcoming Activities - The upcoming activities shows the top 5 activities nearing the deadline. The activities are picked up from the applications and the company name and the due date is displayed on this section. 
-  - Location- The map shows the various office locations for the applied companies. The thought behind is to better plan the commute and residence based on the location distance
-    ![image](https://user-images.githubusercontent.com/51504486/144658182-1cb65338-09dd-4698-acde-4b5651ca5022.png)
- 
+  
 - **Edit User Profile** 
   - User has the option to edit profile
     ![image](https://user-images.githubusercontent.com/51504486/144659025-855057d1-2d20-4c89-b85c-96f4e952e86e.png)
