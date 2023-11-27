@@ -14,11 +14,11 @@
 | Docs: How: for common use cases x,y,z mini tutorials showing examples on how to do x,y,z | 3   | 283   |
 | Docs: Why: docs tell a story, motivate the whole thing, deliver a punch line that makes you want to rush out and use the thing | 3   | 283   |
 | Docs: short video, animated, hosted on your repo. that convinces people why they want to work on your code. | 3   | 283   |
-| Use of version control tools | 3   | [github repo](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek)   |
+| Use of version control tools | 3   | [github repo](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
 | Use of style checkers | 3   | [stylechecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
 | Use of code formatters | 3   |  Nothing in GitHub. Might have used in VS Code  |
 | Use of syntax checkers | 3   | [syntaxchecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
-| Use of code coverage | 3   |  [DOI badge in readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)  |
+| Use of code coverage | 3   |  [DOI badge in readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)  |
 | Other automated analysis tools | 3   | Config files in GitHub   |
 | Test Cases Exist | 3   | [UnitTesting Folder](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/UnitTesting)   |
 | Test cases routinely executed | 3   | [Testing Environment](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/prateek/Project2/WolfTrackPlus%20-%20Application/test_env)   |
@@ -33,40 +33,40 @@
 | Short release cycles | 3   | [graphs](https://github.com/prateeksingamsetty/WolfTrackPlus/graphs/code-frequency)   |
 | Does your website and documentation provide a clear, high-level overview of your software? | Yes   | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Does your website clearly describe the type of user who should use your software? | Yes  | [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)   |
-| Do you publish case studies to show how your software has been used by yourself and others? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
+| Do you publish case studies to show how your software has been used by yourself and others? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
 | Is the name of your project/software unique? | No   |    |
 | Is your project/software name free from trade mark violations? | No   |    |
 | Is your software available as a package that can be deployed without building it? | No   |    |
-| Is your software available for free? | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus/tree/laasya)   |
-| Is your source code available publicly to donwload, either as a downlaodable bundle or via access to a source code repository | Yes   | 283   |
-| Is your software hosted in an established third party repository like GitHub, BitBucket,LaunchPad or SourceForge | Yes   | 283   |
-| Is your documentation clearly available on your website or within your software | Yes   | 283   |
-| Does your documentation include a "quick start" guide that provides a short overview of how to use your software with some basic examples of use? | Yes   | 283   |
-| If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to dpeloy and use your software | Yes   | 283   |
-| Do you provide a comprehensive guide to all your software's commands, functions and options? | Yes   | 283   |
-| Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? | No   | 283   |
-| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation? | No   | 283   |
-| Do you store your documentation under revision control with your source code? | Yes   | 283   |
-| Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation? | Yes   | 283   |
-|  Does your software describe how a user can get help with using your software? | Yes   | 283   |
-|  Does your website and documentation describe what support, if any, you provide to users and developers?  | No   | 283   |
-| Does your project have an e-mail address or forum that is solely for supporting users? | No   | 283   |
-| Are e-mails to your support e-mail address received by more than one person?  | N/A   | 283   |
-| Does your project have a ticketing system to manage bug reports and feature requests? | Yes   | 283   |
-| Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? | Yes   | 283   |
-| Is your software’s architecture and design modular? | Yes   | 283   |
-| Does your software use an accepted coding standard or convention? | Yes   | 283   |
-| Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones | Yes   | 283   |
-| Does your software allow communications using open communications protocols? e.g. HTTP, FTP, XMPP, SOAP over HTTP,  or domain-specific ones | Yes |283  |
-| Is your software cross-platform compatible? e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari? | Yes  | 283   |
-| Does your software adhere to appropriate accessibility conventions or standards? | Yes   | 283   |
-| Does your documentation adhere to appropriate accessibility conventions or standards? | Yes   | 283   |
-| Is your source code stored in a repository under revision control? | Yes   | 283   |
-| Is each source code release a snapshot of the repository? | Yes   | 283   |
-| Are releases tagged in the repository? | Yes   | 283   |
-| Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | Yes   | 283   |
-| Do you back-up your repository? | N/A   | 283   |
-| Do you provide publicly-available instructions for building your software from the source code? | Yes   | 283   |
+| Is your software available for free? | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
+| Is your source code available publicly to donwload, either as a downlaodable bundle or via access to a source code repository | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
+| Is your software hosted in an established third party repository like GitHub, BitBucket,LaunchPad or SourceForge | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
+| Is your documentation clearly available on your website or within your software | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
+| Does your documentation include a "quick start" guide that provides a short overview of how to use your software with some basic examples of use? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
+| If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to dpeloy and use your software | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
+| Do you provide a comprehensive guide to all your software's commands, functions and options? | Yes   |  [Documentation](https://wolftrackplus.readthedocs.io/en/latest/)  |
+| Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? | No   |    |
+| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation? | No   |    |
+| Do you store your documentation under revision control with your source code? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
+| Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation? | Yes   | [Activity](https://github.com/prateeksingamsetty/WolfTrackPlus/activity)   |
+|  Does your software describe how a user can get help with using your software? | Yes   |    |
+|  Does your website and documentation describe what support, if any, you provide to users and developers?  | No   |    |
+| Does your project have an e-mail address or forum that is solely for supporting users? | No   |    |
+| Are e-mails to your support e-mail address received by more than one person?  | N/A   |   |
+| Does your project have a ticketing system to manage bug reports and feature requests? | Yes   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? | Yes   | [issues](https://github.com/prateeksingamsetty/WolfTrackPlus/issues)   |
+| Is your software’s architecture and design modular? | Yes   |    |
+| Does your software use an accepted coding standard or convention? | Yes   |    |
+| Does your software allow data to be imported and exported using open data formats? e.g. GIF, SVG, HTML, XML, tar, zip, CSV, JSON, NetCDF, or domain specific ones | Yes   |    |
+| Does your software allow communications using open communications protocols? e.g. HTTP, FTP, XMPP, SOAP over HTTP,  or domain-specific ones | Yes |  |
+| Is your software cross-platform compatible? e.g. does it run under two or more of Windows, Unix/Linux and Mac OS X, or can be used from within two or more of Internet Explorer, Chrome, Firefox and Safari? | Yes  |    |
+| Does your software adhere to appropriate accessibility conventions or standards? | Yes   |    |
+| Does your documentation adhere to appropriate accessibility conventions or standards? | Yes   |    |
+| Is your source code stored in a repository under revision control? | Yes   | [GitHub](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
+| Is each source code release a snapshot of the repository? | Yes   |    |
+| Are releases tagged in the repository? | Yes   |    |
+| Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | Yes   | [main branch](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
+| Do you back-up your repository? | N/A   |    |
+| Do you provide publicly-available instructions for building your software from the source code? | Yes   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/readme.md)   |
 | Can you build, or package, your software using an automated tool? e.g. Make (https://www.gnu.org/software/make/), ANT (http://ant.apache.org/), Maven (https://maven.apache.org/), CMake (https://cmake.org/), Python setuptools (https://pypi.python.org/pypi/setuptools), or R package tools (https://cran.r-project.org/doc/manuals/r-devel/R-exts.html) | Yes   | 283   |
 |  Do you provide publicly-available instructions for deploying your software? | Yes   | 283   |
 | Does your documentation list all third-party dependencies? | Yes   | 283   |
