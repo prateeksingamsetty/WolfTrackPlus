@@ -143,39 +143,27 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
   - User Interface to login to the Wolftrack app. After successful login, user will be redirected to the Dashboard page
 ![image](https://user-images.githubusercontent.com/51504486/144655666-a5d8eae0-efb2-4fd4-94da-b7dae79f588e.png)
 
-- **Dashboard** 
-  - The 4 section (Wishlist, Applied, In-process, Offers) categorizes all the applications based on the current status and shows 3 applications on the home page. The tool allows the user to create new applications by clicking on 'Add New' button while the 'View More' button allows the user to list applications in each section. For each section the user has three options:
-    1. Change the status of the application 
-    2. Edit the details of any application
-    3. Delete the application
-    
-    ![image](https://user-images.githubusercontent.com/51504486/144657864-12892f0c-e811-470e-81a8-ed13799b9808.png)
+- **Dashboard**
+  
+    - **Job Apply Feature**
 
-  - The left-most section of the dashboard shows the User details. The user also has the option to edit his/her profile.
+       The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can  browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.<br>
+      
+<br>
 
-  - Upcoming Activities - The upcoming activities shows the top 5 activities nearing the deadline. The activities are picked up from the applications and the company name and the due date is displayed on this section. 
-  - Location- The map shows the various office locations for the applied companies. The thought behind is to better plan the commute and residence based on the location distance
-    ![image](https://user-images.githubusercontent.com/51504486/144658182-1cb65338-09dd-4698-acde-4b5651ca5022.png)
- 
-- **Edit User Profile** 
-  - User has the option to edit profile
-    ![image](https://user-images.githubusercontent.com/51504486/144659025-855057d1-2d20-4c89-b85c-96f4e952e86e.png)
-    
-- **Add New Application** 
-  - User interface for adding a new application to the portal
-    ![image](https://user-images.githubusercontent.com/51504486/144658254-bebf38e8-167e-4e15-927e-96d94cb6732a.png)
+   ![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Job_apply_feature.jpg)
 
-- **Edit Existing Application**
-  - The user has the option to edit the details of each applcation
-    ![image](https://user-images.githubusercontent.com/51504486/144658556-280c962d-5882-400f-8143-86e453a53f3c.png)
-    
-- **Delete Application**
-  - The user has the option to delete an applcation
-    ![image](https://user-images.githubusercontent.com/51504486/144658720-bb9461f1-6ce1-4de3-9eeb-302812a10490.png)
-    
-- **Change status of an application**
-  - The user has the option to change the status of an applcation
-    ![image](https://user-images.githubusercontent.com/51504486/144658895-e46c0aa6-0e1a-41ac-b349-8f4e2560d282.png)
+   - **All Job Applications Locations Display**
+      
+The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
+
+<br>
+
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Application_Locations.jpg?raw=true)
+
+<br>
+
+
     
 ---
 ## Email Notifiications
