@@ -11,8 +11,8 @@
 | DOI Badge: exists | 3   | [readme.md](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/laasya/Project%203/readme.md)   |
 | Docs: Docs generated, format not ugly | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Docs: What: point descriptions of each class/function(in isolaiton) | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
-| Docs: How: for common use cases x,y,z mini tutorials showing examples on how to do x,y,z | 3   | 283   |
-| Docs: Why: docs tell a story, motivate the whole thing, deliver a punch line that makes you want to rush out and use the thing | 3   | 283   |
+| Docs: How: for common use cases x,y,z mini tutorials showing examples on how to do x,y,z | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
+| Docs: Why: docs tell a story, motivate the whole thing, deliver a punch line that makes you want to rush out and use the thing | 3   | [docs](https://wolftrackplus.readthedocs.io/en/latest/)   |
 | Docs: short video, animated, hosted on your repo. that convinces people why they want to work on your code. | 3   | 283   |
 | Use of version control tools | 3   | [github repo](https://github.com/prateeksingamsetty/WolfTrackPlus)   |
 | Use of style checkers | 3   | [stylechecker](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek/pylintrc)   |
