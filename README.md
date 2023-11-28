@@ -20,9 +20,11 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 [![Build Status](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Build%20Status/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
 [![Codestyle: Black](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Black%20Format%20Checker/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
 
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ramyasaimullapudi/WolfTrackPlus)
-![GitHub open issues](https://img.shields.io/github/issues/ramyasaimullapudi/WolfTrackPlus)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/ramyasaimullapudi/WolfTrackPlus)
+
+
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/prateeksingamsetty/WolfTrackPlus)
+![GitHub open issues](https://img.shields.io/github/issues/prateeksingamsetty/WolfTrackPlus)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/prateeksingamsetty/WolfTrackPlus)
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
 [![codecov](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus/branch/main/graph/badge.svg?token=Sfdls5yVnN)](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus)
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
