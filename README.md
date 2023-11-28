@@ -16,19 +16,19 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 
 [![DOI](https://zenodo.org/badge/428888852.svg)](https://zenodo.org/badge/latestdoi/428888852)
 ![Python](https://img.shields.io/badge/python-v3.8+-green.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Build%20Status/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
-[![Codestyle: Black](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Black%20Format%20Checker/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Github](https://img.shields.io/badge/language-python-red.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/prateeksingamsetty/WolfTrackPlus)
 ![GitHub open issues](https://img.shields.io/github/issues/prateeksingamsetty/WolfTrackPlus)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/prateeksingamsetty/WolfTrackPlus)
-[![Python Style Checker](https://github.com/prateeksingamsetty/Simplii/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml)
+[![Python Style Checker](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml)
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
 [![Close as a feature](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/close_as_a_feature.yml)
 [![Lint Python](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml)
 ![Code Coverage](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/coverage.svg)
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
+
 
 
 ## Project Overview
