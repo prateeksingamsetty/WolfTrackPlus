@@ -27,8 +27,8 @@ print(sys.path)
 # -- Project information -----------------------------------------------------
 
 project = "WolfTrackPlus"
-copyright = "2021, Ramya Sai Mullapudi, Lakshmi Swetha Gavini, Rohan Prabune, Arjun Madhusudan, Saurabh Krishna Vankkad"
-author = "Ramya Sai Mullapudi, Lakshmi Swetha Gavini, Rohan Prabune, Arjun Madhusudan, Saurabh Krishna Vankkad"
+copyright = "2023, Shiva Vara Prasad Kandhagatla, Prateek Singamsetty, Laasya Choudary Nandamuri, Jayanth Ramanidharan"
+author = "Shiva Vara Prasad Kandhagatla, Prateek Singamsetty, Laasya Choudary Nandamuri, Jayanth Ramanidharan"
 
 # The full version, including alpha/beta/rc tags
 release = "v3.8"
@@ -39,7 +39,8 @@ release = "v3.8"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx.ext.autodoc", "sphinx.ext.coverage", "sphinx.ext.napoleon"]
+extensions = ["sphinx.ext.autodoc",
+              "sphinx.ext.coverage", "sphinx.ext.napoleon"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
