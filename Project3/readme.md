@@ -1,60 +1,74 @@
-<h1 align= "center"><b>WolfTrackPlus</b></h1>
+<h1 align= "left"><b>WolfTrackPlus</b></h1>
 
-### Watch WolftrackPlus in Action
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/job-app-tracker.jpg?raw=true)
 
-[Project 1 - Link](https://youtu.be/Z_OqqHXdwJ0)
+<h3> Are you struggling to track job applications? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
 
-[Project 2 - Link](https://youtu.be/12VUntGWZys)
+Looking for a seamless way to manage your job search? Our Job Application Tracker is your one-stop solution to streamline and organize the entire job application process. No more scattered notes, missed deadlines, or forgotten details – stay on top of your career journey with ease. Say goodbye to the hassle of managing multiple spreadsheets or forgetting important details. With our Job Application Tracker, take control of your job search journey and pave the way for a more organized and successful career transition. Start tracking, start succeeding.
+
+### Link to Demonstration Video of the Project: 
+
+[Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
+
+# Table of Contents  
+
+- [WolfTrackPlus](#WolfTrackPlus)
+- [Built with:](#built-with)
+- [Version Tags](#Version-Tags)
+- [Project Overview](#Project-Overview)
+- [Getting started:](#Getting-started)
+- [Third-Party Tools](#Third-Party-Tools)
+- [Enhancements](#enhancements)
+  - [Preview](#Preview)
+  - [Sign Up Page](#Sign-Up-Page)
+  - [Login Page](#Login-Page)
+  - [Dashboard](#Dashboard)
+  - [Job Apply Feature](#Job-Apply-Feature)
+  - [All Job Applications Locations Display](#All-Job-Applications-Locations-Display)
+  - [Email Notifiications](#Email-Notifiications)
+- [Contact](#Contact)
+- [Contributors](#Contributors)
+- [Contribution](#Contribution)
+- [License](#license)
+
 
 ### Version Tags
 
-**Version 1 tags:**<br/>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![DOI](https://zenodo.org/badge/408669082.svg)](https://zenodo.org/badge/latestdoi/408669082)
-[![GitHub Release](https://img.shields.io/github/release/Himanshuu-Gupta/WolfTrack)](https://github.com/Himanshuu-Gupta/WolfTrack/releases/tag/wolftrack)
-[![Build Status](https://app.travis-ci.com/Himanshuu-Gupta/WolfTrack.svg?branch=main)](https://app.travis-ci.com/Himanshuu-Gupta/WolfTrack)
-
-**Version 2 tags:**<br/>
-
-[![DOI](https://zenodo.org/badge/418295938.svg)](https://zenodo.org/badge/latestdoi/418295938)
-[![GitHub Release](https://img.shields.io/github/release/ArpithaVijayakumar/WolfTrack)](https://github.com/ArpithaVijayakumar/WolfTrack/releases/tag/wolftrack)
-![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
-![GitHub issues](https://img.shields.io/github/issues/ArpithaVijayakumar/WolfTrack)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/ArpithaVijayakumar/WolfTrack)
-![Lines of code](https://img.shields.io/tokei/lines/github/ArpithaVijayakumar/WolfTrack)
-[![Build Status](https://app.travis-ci.com/UnnatiPrema/WolfTrackPlus.svg?branch=main)](https://app.travis-ci.com/UnnatiPrema/WolfTrackPlus)
-[![codecov](https://codecov.io/gh/ArpithaVijayakumar/WolfTrackPlus/branch/main/graph/badge.svg?token=h4F94IJMzj)](https://codecov.io/gh/ArpithaVijayakumar/WolfTrackPlus)
-
-**Version 3 Tags:** <br/>
-
 [![DOI](https://zenodo.org/badge/428888852.svg)](https://zenodo.org/badge/latestdoi/428888852)
 ![Python](https://img.shields.io/badge/python-v3.8+-green.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Build%20Status/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
-[![Codestyle: Black](https://github.com/ramyasaimullapudi/WolfTrackPlus/workflows/Black%20Format%20Checker/badge.svg)](https://github.com/ramyasaimullapudi/WolfTrackPlus/actions)
-
-![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ramyasaimullapudi/WolfTrackPlus)
-![GitHub open issues](https://img.shields.io/github/issues/ramyasaimullapudi/WolfTrackPlus)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/ramyasaimullapudi/WolfTrackPlus)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Github](https://img.shields.io/badge/language-python-red.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/prateeksingamsetty/WolfTrackPlus)
+![GitHub open issues](https://img.shields.io/github/issues/prateeksingamsetty/WolfTrackPlus)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/prateeksingamsetty/WolfTrackPlus)
+[![Python Style Checker](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml)
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
-[![codecov](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus/branch/main/graph/badge.svg?token=Sfdls5yVnN)](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus)
+[![Lint Python](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml)
+![Code Coverage](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/coverage.svg)
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
 
 
-**Goal:**<br/>
 
-One stop shop for your very own personal Job-tracker application!
+## Project Overview
 
-**Documentation:**<br/>
-Checkout our documentation for source code and test cases at https://wolftrackplus.readthedocs.io/en/latest/
+### Objective
+Build a comprehensive Job-Tracker application.
 
-**Project Description:**
+### Features
+Keep track of dates, notes, tasks, job details, salaries, locations, and valuable company insights to help users efficiently manage and organize their job application process.
 
-Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job detail, we're talking about dates, notes, tasks, job descriptions, salaries, locations, company insight and more!
+### Explore
 
-**So, let's go get that job! 😎**
+[Documentation](https://wolftrackplus.readthedocs.io/en/latest/) Dive into the source code and test cases.
 
+### Getting Started
+
+[User Guide](https://wolftrackplus.readthedocs.io/en/latest/) Start using WolfTrack effectively.
+
+### Let's Conquer Together
+
+[GitHub Repository](https://github.com/prateeksingamsetty/WolfTrackPlus) Access the source code and contribute.
 
 
 <!-- 
@@ -69,25 +83,18 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 ![GitHub](https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717)
 ![MS SQL Server](http://img.shields.io/badge/-MS%20SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=ffffff) -->
 
-**Built Using:**
+### Built with:
 
-<code><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg"></a></code>
-<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg"></a></code>
-<code><a href="https://getbootstrap.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg"></a></code>
-<code><a href="https://www.javascript.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg"></a></code>
-<code><a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg"></a></code>
-<code><a href="https://www.mysql.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"></a></code>
-<code><a href="https://aws.amazon.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></a></code>
-<!-- <code><a href="https://git-scm.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></a></code>
-<code><a href="https://github.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/github/github-ar21.svg"></a></code> -->
-<!-- <code><a href="https://code.visualstudio.com/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/visualstudio_code/visualstudio_code-ar21.svg"></a></code>
-<code><a href="https://www.python.org/" target="_blank"><img height="50" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></a></code>-->
+<code><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="80" height="80" /></code>
+<code><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg"></a></code>
+<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg"></a></code>
+<code><a href="https://getbootstrap.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg"></a></code>
+<code><a href="https://www.javascript.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg"></a></code>
+<code><a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg"></a></code>
+<code><a href="https://aws.amazon.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg"></a></code>
+<code><a href="https://www.mysql.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg"></a></code>
+<code><a href="https://git-scm.com/" target="_blank"><img height="80" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"></a></code>
 
-<p align="center">
-<img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="150"> <img src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="150"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="150"> <img src="https://media.giphy.com/media/UWt0rhp21JgLwoeFQP/giphy.gif" width ="150"/> <img src="https://media.giphy.com/media/kH6CqYiquZawmU1HI6/giphy.gif" width ="150"/> 
-</p>
-
----
 
 ## Getting started:
 
@@ -137,17 +144,19 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
 - **Sign Up Page**
   - User Interface to signup to the app
+    
 ![image](https://user-images.githubusercontent.com/51504486/144655593-be1df836-fe47-420c-a6ce-112f31cddd2a.png)
 
 - **Login Page**
   - User Interface to login to the Wolftrack app. After successful login, user will be redirected to the Dashboard page
+    
 ![image](https://user-images.githubusercontent.com/51504486/144655666-a5d8eae0-efb2-4fd4-94da-b7dae79f588e.png)
 
 - **Dashboard**
   
     - **Job Apply Feature**
 
-       The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can  browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.<br>
+       The job application feature showcases various software engineering positions, presenting pertinent details such as company names and job URLs. Users can  browse through the available job listings and apply for positions by accessing the provided job URLs. Clicking on a URL redirects users to the specific job posting, enabling them to proceed with their applications directly on the respective job posting page.<br>
       
 <br>
 
@@ -155,7 +164,7 @@ Do away with complicated, messy spreadsheets! WolfTrack keeps track of every job
 
    - **All Job Applications Locations Display**
       
-The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
+The developed feature entails showcasing all the locations involved in the application process. Utilizing the OpenCage library, we retrieve coordinates corresponding to each location, enabling us to display them accurately on the website's map interface. This functionality allows users to visualize and explore the various application locations seamlessly integrated into the map displayed on the website.
 
 <br>
 
@@ -169,6 +178,9 @@ The developed feature entails showcasing all the locations involved in the appli
 ## Email Notifiications
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
+
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/shiva/Project3/Assets/welcomeemail.JPG?raw=true)
+
 ![image](https://user-images.githubusercontent.com/51504486/144724525-adb6691e-046a-479c-a050-341b9cf64d73.png)
 
 ![image](https://user-images.githubusercontent.com/51504486/144724556-7d3bad98-5175-4663-bc2d-b601dac4137f.png)
@@ -182,68 +194,23 @@ An email is sent when a new account is created, new job application is submitted
 ![image](https://github.com/salonishah01/WolfTrackPlus/assets/59621149/03da603c-d8cc-482e-92ba-787dac032183)
 
 
-
-
-
-### Phase 1:
-
-- [x] Create database ER diagram
-- [x] Create SQL DML and DDL queries
-- [x] Create Dashboard Page
-- [x] Create Login Page
-- [x] Create Signup Page
-- [x] Setup Flask
-- [x] Add Unit testing
-- [x] Add Error Handling mechanisms
-- [x] Mock of Job Application Map using Power BI
-
-### Phase 2:
-
-- [x] Integrating Components to create a complete workflow
-- [x] Revamped database design following ACID properties
-- [x] Added validations to user input for Login, Signup and Add Application 
-- [x] Added style checkers which were not existing before
-- [x] Made UI to be more reactive by enforcing the user to enter required fields
-- [x] Create APIs for relevant functionalities
-
-### Phase3:
-For more detailed description - Check [Changes.md](https://github.com/ramyasaimullapudi/WolfTrackPlus/blob/main/docs/Changes.md)
-- [x] Editing an application
-- [x] Change the application status
-- [x] Delete an application
-- [x] Added scrollbar for job listings on dashboard
-- [x] Edit the user profile
-- [x] Auto documentation for the project using Sphinx
-- [x] Email reminders for application creation and modification
-- [x] Format checkers implemented
-- [x] Hosted the website - http://rjprabhu.pythonanywhere.com/
-   
-### Phase4:
-- [ ] Display the location of the application on the map
-- [ ] Share your profile with others
-- [ ] Reading mails from your inbox and automatically adding/updating the status of the application
-- [ ] Enabling Desktop Notifications
-
-## Contributions to the Project
-Please refer to the [Contributing.md](https://github.com/salonishah01/WolfTrackPlus/blob/main/Project2/CONTRIBUTING.md) if you want to contrbute to the Wolftrack source code. Follow all the guidelines mentioned and raise a pull request for the developers to review before the code goes to the main source code.
-
-
 ## Contact 
-In case of any issues, please e-mail your queries to rushilvegada@gmail.com or raise an issue on this repository
+In case of any issues, please e-mail your queries to shivakandhagatla1999@gmail.com or raise an issue on this repository
 
-## Contributors:
+ ## Contributors
+   
+  <ul style="list-style-type:  '- ' ; padding: 0;">
+  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;">Shiva Vara Prasad Kandhagatla</a></li>
+  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;">Prateek Singamsetty</a></li>
+  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;">Laasya Choudary Nandamuri </a></li>
+  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;">Jayanth Ramanidharan</a></li>
+</ul>
 
-[Romil Shah](https://github.com/romil2807)
+ ## Contribution
+  
+  Please refer the CONTRIBUTING.md file for instructions on how to contribute to our repository.
 
-[Rushil Vegada](https://github.com/rushilv20)
-
-[Sahil Changlani](https://github.com/sahilchanglani)
-
-[Saloni Shah](https://github.com/salonishah01)
-
-## Previous Contributors:
-Ramya Sai Mullapudi <br/>
-Rohan Prabhune <br/>
-Krishna Saurabh Vankkad <br/>
-Arjun Madhusudan <br/>
-Lakshmi Swetha Gavini <br/>
+ ## License
+  
+  This project is licensed under the MIT License.
+  
