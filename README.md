@@ -181,6 +181,9 @@ The developed feature entails showcasing all the locations involved in the appli
 ## Email Notifiications
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
+
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/shiva/Project3/Assets/welcomeemail.JPG?raw=true)
+
 ![image](https://user-images.githubusercontent.com/51504486/144724525-adb6691e-046a-479c-a050-341b9cf64d73.png)
 
 ![image](https://user-images.githubusercontent.com/51504486/144724556-7d3bad98-5175-4663-bc2d-b601dac4137f.png)
