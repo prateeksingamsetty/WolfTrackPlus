@@ -13,10 +13,10 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 # Table of Contents  
 
 - [WolfTrackPlus](#WolfTrackPlus)
-- [Built with:](#built-with)
+- [Built with](#built-with)
 - [Version Tags](#Version-Tags)
 - [Project Overview](#Project-Overview)
-- [Getting started:](#Getting-started)
+- [Getting started](#Getting-started)
 - [Third-Party Tools](#Third-Party-Tools)
 - [Enhancements](#enhancements)
   - [Preview](#Preview)
