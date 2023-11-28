@@ -1,6 +1,6 @@
 <h1 align= "left"><b>WolfTrackPlus</b></h1>
 
-![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/job-app-tracker.jpg?raw=true)
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/job-app-tracker.jpg?raw=true)
 
 <h3> Are you struggling to track job applications? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
 
@@ -8,7 +8,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 
 ### Link to Demonstration Video of the Project: 
 
-[Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
+[Project 3 - Youtube Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
 
 # Table of Contents  
 
@@ -45,7 +45,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 [![Python Style Checker](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml)
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
 [![Lint Python](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml)
-![Code Coverage](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/coverage.svg)
+![Code Coverage](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/coverage.svg)
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
 
 
@@ -168,7 +168,7 @@ The developed feature entails showcasing all the locations involved in the appli
 
 <br>
 
-![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/jayanth/Project3/Assets/Application_Locations.jpg?raw=true)
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/Application_Locations.jpg?raw=true)
 
 <br>
 
@@ -179,7 +179,7 @@ The developed feature entails showcasing all the locations involved in the appli
 
 An email is sent when a new account is created, new job application is submitted, or a status change in application.
 
-![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/shiva/Project3/Assets/welcomeemail.JPG?raw=true)
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/project3/Project3/Assets/welcomeemail.JPG?raw=true)
 
 ![image](https://user-images.githubusercontent.com/51504486/144724525-adb6691e-046a-479c-a050-341b9cf64d73.png)
 
