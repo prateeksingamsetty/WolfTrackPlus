@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WolfTrack - Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <ul class="navbar-nav ">
+      <a class="navbar-brand" href="/auth">WolfTrack</a>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row content">
+
+      <!-- Left Sidebar -->
+      <div class="col-sm-3 sidenav sidenav-left">
+        <center>
+          <img class="rounded-circle" alt="100x100"
+            src="https://ih1.redbubble.net/image.1703296696.9941/st,small,507x507-pad,600x600,f8f8f8.jpg" height="250px"
+            width="250px" data-holder-rendered="true">
+
+          <br><br>
+          <div class="card" style="width: 18rem; text-align: left;">
+
+            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#edit_profile"><i
+                class="material-icons">edit</i></a>
+            <div class="modal fade new-application-modal" id="edit_profile" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  
+                  <div class="modal-body" style="text-align: left;">
+                    <form action="/edit_profile" method="POST" id="edit_profile">
+                      <div class="form-group">
+                        <label for="exampleInputName">Name</label>
+                        <input type="text" name="name" class="form-control" id="name" required="required"
+                          value="{{data.full_name}}">
+                      </div>
+                      <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select name="gender" class="form-control" id="gender" required="required">
+                          <option value="{{data.gender}}">{{data.gender}}</option>
+                          <!-- Check for data.gender and display the appropriate options -->
+                          {% if data.gender == "Male" %}
+                            <option value="Female">Female</option>
+                            <option value="Non-binary">Non-binary</option>
+                          {% elif data.gender == "Female" %}
+                            <option value="Male">Male</option>
+                            <option value="Non-binary">Non-binary</option>
+                          {% else %}
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                          {% endif %}
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="Location">Location</label>
+                        <input type="text" name="location" class="form-control" id="location" required="required"
+                          value="{{data.location}}">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="user_id" name="user_id" type="hidden" value="{{data.user_id}}">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">{{data["full_name"]}}</h5>
+              <div class="row">
+                <div class="col">
+                  <b>Gender</b>
+                </div>
+                <div class="col">
+                  {{data["gender"]}}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <b>Location</b>
+                </div>
+                <div class="col">
+                  {{data["location"]}}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <br><br>
+        </center>
+
+      </div>
+
+      <!-- Content -->
+      <div class="col-sm-6 text-left main-content">
+        <center>
+          {% block content %}{% endblock %}
+        </center>
+      </div>
+
+
+
+      <!-- Right Sidebar -->
+      <div class="col-sm-3 sidenav sidenav-right">
+
+        <div class="card" style="max-height: 300px; overflow-y: auto;">
+          <div class="card-body">
+            <h6 class="card-title">Upcoming Events</h6>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Company</th>
+                  <!-- <th scope="col">Location</th> -->
+                  <th scope="col">Job Url</th>
+                  <th scope="col">Date Created</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for item in upcoming_events %}
+                <tr>
+                  <td>{{ item.title }}</td>
+                  <td>{{ item.company }}</td>
+                  <!-- <td>{{ item.location }}</td> -->
+                  <td>
+                    <a href="{{item.job_url}}" target="_blank">Apply here</a>
+                  </td>
+                  <td>{{ item.date_created }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <br>
+
+        <!-- Map from Power BI -->
+        <div>
+
+          <!-- Add this code to your home.html template -->
+
+<head>
+
+  <!-- Include Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+<!-- Include Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<div>
+  <h5 class="card-title">All Job Application Locations</h5>
+  <!-- Add a container for the map -->
+  <div id="map" style="height: 400px;"></div>
+
+  <!-- Add these hidden elements to store JSON data -->
+  <!-- Ensure that these elements are present in your HTML -->
+  
+
+  <!-- Include Leaflet CSS and JavaScript -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Keep the rest of your code as it is -->
+  <input type="hidden" id="jobLocationsData" value="{{ all_job_locations }}">
+  <input type="hidden" id="coordinatesListData" value="{{ coordinates_list }}">
+  <input type="hidden" id="all_companiesData" value="{{ all_companies }}">
+  <input type="hidden" id="coordinatesListData" value="{{ coordinates_list | tojson | safe }}">
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 2);
+    
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Retrieve job locations and coordinates from hidden elements
+        var jobLocationsDataElement = document.getElementById('jobLocationsData');
+        var coordinatesListDataElement = document.getElementById('coordinatesListData');
+        var companyListDataElement = document.getElementById('all_companiesData');
+        // Check if the elements are found
+        if (!jobLocationsDataElement || !coordinatesListDataElement ||  !all_companiesData) {
+          console.error('Hidden elements not found');
+          return;
+        }
+    
+        // Get the values from the hidden elements and parse JSON data
+        var jobLocationsData = jobLocationsDataElement.value;
+        var coordinatesListData = coordinatesListDataElement.value;
+        var companyListData = companyListDataElement.value;
+
+        try {
+          // Parse JSON data
+          var jobLocations = JSON.parse(jobLocationsData);
+          var coordinatesList = JSON.parse(coordinatesListData);
+          var companyList= JSON.parse(companyListData);
+          // Ensure the variables are arrays
+          jobLocations = Array.isArray(jobLocations) ? jobLocations : [];
+          companyList = Array.isArray(companyList) ? companyList : [];
+          coordinatesList = coordinatesList || {};
+    
+          // Check if jobLocations and coordinatesList are not null
+          for (var key in coordinatesList) {
+            if (coordinatesList.hasOwnProperty(key)) {
+              var coordinates = coordinatesList[key];
+              var location = jobLocations[key];
+              var companyname = companyList[key];
+              // Check if the coordinates have 'latitude' and 'longitude'
+              if (coordinates && coordinates.latitude !== undefined && coordinates.longitude !== undefined) {
+                console.log(location);
+                L.marker([coordinates.latitude, coordinates.longitude]).addTo(map)
+                  .bindPopup('<b>' + companyname + '</b><br>' + location);
+              } else {
+                console.error('Invalid coordinates for key ' + key, coordinates);
+              }
+            }
+          }
+        } catch (error) {
+          console.error('Error parsing JSON data:', error);
+        }
+      });
+    </script>
+    
+</div>
+
+
+
+
+
+
+        </div>
+
+
+</body>
+
+</html>

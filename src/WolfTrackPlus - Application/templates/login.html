@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> WolfTrack </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    
+  </head>
+
+<body>
+  
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="{{ url_for('static', filename='images/frontImg.jpg') }}" alt="">
+        <div class="text">
+          <span class="text-1"><h2>WolfTrack</h2><br></span>
+          <span class="text-2">Don't stop until you're proud!</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="{{ url_for('static', filename='images/backImg.jpg') }}" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one click</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            {% if emailError %}
+            <p style="color: red;">{{ emailError }}</p>
+        {% elif successMessage %}
+            <p style="color: green;">{{ successMessage }}</p>
+        {% endif %}
+            <div class="title">Login</div>
+          <form name="loginForm" action="/loginUser" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input id='login-username' name='username' type="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input id="login-password"name='password' type="password" placeholder="Enter your password" required>
+              </div>
+              <div id="login-error"><p class="text-red">{{loginError}}</p></div>
+              <div class="button input-box">
+                <input type="submit" value="Submit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          
+          <div class="title">Signup</div>
+          <form name="signupForm" action="/signup" method="post">
+            <div class="input-boxes">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input id="signup-name" type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input id="signup-email" type="text" name="email" placeholder="Enter your email" required>
+                </div>
+                <div id="signup-error"><p class="text-red">{{emailError}}</p></div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input id="signup-password" type="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" name="gender" id="gender" style="height:3em;width:20em;border: none;font-size: 1em;">
+                          <option value="" disabled selected>Gender</option>  
+                          <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Non-binary">Non-binary</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-box">
+                  
+                  <select name="location" id="location" style="height: 3em; width: 20em; border: none; font-size: 1em;">
+                        <option value="" disabled selected>Select your location</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                </div>
+                <div class="button input-box">
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

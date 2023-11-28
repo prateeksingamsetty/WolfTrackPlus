@@ -1,0 +1,1467 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+
+<div class="row">
+    <div class="card status-card col-md" style="width: 18rem;">
+        <i class="material-icons card-icons">schedule</i>
+        <div class="card-body">
+            <h5 class="card-title">Wish List</h5>
+        </div>
+        <ul class="list-group list-group-flush" style="width: 100%; height: 150px; overflow: auto">
+            {% for item in data.wishlist %}
+            {% if item.1 == 'TO_DO' %}
+            <div class="list-group-item"
+                style="background-color: #34e8eb; border: 2px solid black; border-radius: 20px; margin: 5px; color: black; font-weight: bold; box-shadow: 5px 10px; ;">
+                <span>{{ item.0 }}</span>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#change_status_wishlist{{item.3}}"><i
+                        class="material-icons">sync_alt</i></a>
+                <div class="modal fade new-application-modal" id="change_status_wishlist{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Change Status of the Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/change_status_application" method="POST" id="change_status_application">
+
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="status_change">Change Status of the Application</label>
+                                        <select name="status_change" class="form-control" id="status_change">
+                                            <option selected value="TO_DO">Wishlist</option>
+                                            <option value="IN_PROCESS">In Process</option>
+                                            <option value="APPLIED">Applied</option>
+                                            <option value="ACCEPTED">Offers</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Change Status</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#edit_application{{item.3}}"><i
+                        class="material-icons">edit</i></a>
+                <div class="modal fade new-application-modal" id="edit_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Job Application</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                <form action="/edit_application" method="POST" id="edit_application{{item.3}}">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Company Name</label>
+                                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                                            placeholder="Enter Company Name" required="required" value="{{item.0}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Location">Location</label>
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="JobProfile">Job Profile</label>
+                                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                                            placeholder="Enter Job Profile" required="required" value="{{item.5}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Salary">Salary</label>
+                                        <input type="text" name="salary" class="form-control" id="Salary"
+                                            placeholder="Enter Salary" required="required" value="{{item.6}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Username">Username</label>
+                                        <input type="text" name="username" class="form-control" id="Username"
+                                            placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <input type="text" name="password" class="form-control" id="Password"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityQuestion">Security Question</label>
+                                        <input type="text" name="securityQuestion" class="form-control"
+                                            id="SecurityQuestion" placeholder="Enter Security Question">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityAnswer">Security Answer</label>
+                                        <input type="text" name="securityAnswer" class="form-control"
+                                            id="SecurityAnswer" placeholder="Enter Security Answer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Notes">Notes</label>
+                                        <textarea class="form-control" id="Notes" name="notes"
+                                            placeholder="Save links and other information here">{{item.7}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-date-input" class="col-3 col-form-label">Date
+                                            Applied</label>
+                                        <div class="col-10">
+                                            <input class="form-control" name="dateApplied" type="date"
+                                                value="{{item.2}}" id="example-date-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="status" name="status" type="hidden"
+                                            value="{{item.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete_application{{item.3}}"><i
+                        class="material-icons">delete</i></a>
+                <div class="modal fade new-application-modal" id="delete_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/delete_application" method="POST" id="delete_application">
+
+                                <div class="modal-body">
+                                    <div>Are you sure you want to delete the application {{item.0}}</div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Delete Application</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="card-body">
+            <a href="/view?show=to_do" class="card-link">View More</a>
+            <a href="#" class="card-link" data-toggle="modal" data-target="#wish">Add New</a>
+        </div>
+    </div>
+
+    <div class="card status-card col-md" style="width: 18rem;">
+        <i class="material-icons card-icons">trending_up</i>
+        <div class="card-body">
+            <h5 class="card-title">In Process</h5>
+        </div>
+        <ul class="list-group list-group-flush" style="width: 100%; height: 150px; overflow: auto">
+            {% for item in data.wishlist %}
+            {% if item.1 == 'IN_PROCESS' %}
+            <div class="list-group-item"
+                style="background-color: #34e8eb; border: 2px solid black; border-radius: 20px; margin: 5px; color: black; font-weight: bold; box-shadow: 5px 10px; ;">
+                <span>{{ item.0 }}</span>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#change_status_wishlist{{item.3}}"><i
+                        class="material-icons">sync_alt</i></a>
+                <div class="modal fade new-application-modal" id="change_status_wishlist{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Change Status of the Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/change_status_application" method="POST" id="change_status_application">
+
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="status_change">Change Status of the Application</label>
+                                        <select name="status_change" class="form-control" id="status_change">
+                                            <option value="TO_DO">Wishlist</option>
+                                            <option selected value="IN_PROCESS">In Process</option>
+                                            <option value="APPLIED">Applied</option>
+                                            <option value="ACCEPTED">Offers</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Change Status</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#edit_application{{item.3}}"><i
+                        class="material-icons">edit</i></a>
+                <div class="modal fade new-application-modal" id="edit_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Job Application</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                <form action="/edit_application" method="POST" id="edit_application{{item.3}}">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Company Name</label>
+                                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                                            placeholder="Enter Company Name" required="required" value="{{item.0}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Location">Location</label>
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="JobProfile">Job Profile</label>
+                                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                                            placeholder="Enter Job Profile" required="required" value="{{item.5}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Salary">Salary</label>
+                                        <input type="text" name="salary" class="form-control" id="Salary"
+                                            placeholder="Enter Salary" required="required" value="{{item.6}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Username">Username</label>
+                                        <input type="text" name="username" class="form-control" id="Username"
+                                            placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <input type="password" name="password" class="form-control" id="Password"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityQuestion">Security Question</label>
+                                        <input type="text" name="securityQuestion" class="form-control"
+                                            id="SecurityQuestion" placeholder="Enter Security Question">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityAnswer">Security Answer</label>
+                                        <input type="text" name="securityAnswer" class="form-control"
+                                            id="SecurityAnswer" placeholder="Enter Security Answer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Notes">Notes</label>
+                                        <textarea class="form-control" id="Notes" name="notes"
+                                            placeholder="Save links and other information here">{{item.7}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-date-input" class="col-3 col-form-label">Date
+                                            Applied</label>
+                                        <div class="col-10">
+                                            <input class="form-control" name="dateApplied" type="date"
+                                                value="{{item.2}}" id="example-date-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="status" name="status" type="hidden"
+                                            value="{{item.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete_application{{item.3}}"><i
+                        class="material-icons">delete</i></a>
+                <div class="modal fade new-application-modal" id="delete_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/delete_application" method="POST" id="delete_application">
+
+                                <div class="modal-body">
+                                    <div>Are you sure you want to delete the application {{item.0}}</div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Delete Application</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="card-body">
+            <a href="/view?show=in_process" class="card-link">View More</a>
+            <a href="#" class="card-link" data-toggle="modal" data-target="#prog">Add New</a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card status-card col-md" style="width: 18rem;">
+        <i class="material-icons card-icons">task</i>
+        <div class="card-body">
+            <h5 class="card-title">Applied</h5>
+        </div>
+        <ul class="list-group list-group-flush" style="width: 100%; height: 150px; overflow: auto">
+            {% for item in data.wishlist %}
+            {% if item.1 == 'APPLIED' %}
+            <div class="list-group-item"
+                style="background-color: #34e8eb; border: 2px solid black; border-radius: 20px; margin: 5px; color: black; font-weight: bold; box-shadow: 5px 10px; ;">
+                <span>{{ item.0 }}</span>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#change_status_wishlist{{item.3}}"><i
+                        class="material-icons">sync_alt</i></a>
+                <div class="modal fade new-application-modal" id="change_status_wishlist{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Change Status of the Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/change_status_application" method="POST" id="change_status_application">
+
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="status_change">Change Status of the Application</label>
+                                        <select name="status_change" class="form-control" id="status_change">
+                                            <option value="TO_DO">Wishlist</option>
+                                            <option value="IN_PROCESS">In Process</option>
+                                            <option selected value="APPLIED">Applied</option>
+                                            <option value="ACCEPTED">Offers</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Change Status</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#edit_application{{item.3}}"><i
+                        class="material-icons">edit</i></a>
+                <div class="modal fade new-application-modal" id="edit_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Job Application</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                <form action="/edit_application" method="POST" id="edit_application{{item.3}}">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Company Name</label>
+                                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                                            placeholder="Enter Company Name" required="required" value="{{item.0}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Location">Location</label>
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="JobProfile">Job Profile</label>
+                                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                                            placeholder="Enter Job Profile" required="required" value="{{item.5}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Salary">Salary</label>
+                                        <input type="text" name="salary" class="form-control" id="Salary"
+                                            placeholder="Enter Salary" required="required" value="{{item.6}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Username">Username</label>
+                                        <input type="text" name="username" class="form-control" id="Username"
+                                            placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <input type="password" name="password" class="form-control" id="Password"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityQuestion">Security Question</label>
+                                        <input type="text" name="securityQuestion" class="form-control"
+                                            id="SecurityQuestion" placeholder="Enter Security Question">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityAnswer">Security Answer</label>
+                                        <input type="text" name="securityAnswer" class="form-control"
+                                            id="SecurityAnswer" placeholder="Enter Security Answer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Notes">Notes</label>
+                                        <textarea class="form-control" id="Notes" name="notes"
+                                            placeholder="Save links and other information here">{{item.7}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-date-input" class="col-3 col-form-label">Date
+                                            Applied</label>
+                                        <div class="col-10">
+                                            <input class="form-control" name="dateApplied" type="date"
+                                                value="{{item.2}}" id="example-date-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="status" name="status" type="hidden"
+                                            value="{{item.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete_application{{item.3}}"><i
+                        class="material-icons">delete</i></a>
+                <div class="modal fade new-application-modal" id="delete_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/delete_application" method="POST" id="delete_application">
+
+                                <div class="modal-body">
+                                    <div>Are you sure you want to delete the application {{item.0}}</div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Delete Application</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </ul>
+        <div class="card-body">
+            <a href="/view?show=applied" class="card-link">View More</a>
+            <a href="#" class="card-link" data-toggle="modal" data-target="#applied">Add New</a>
+        </div>
+    </div>
+
+    <div class="card status-card col-md" style="width: 18rem;">
+        <i class="material-icons card-icons">beenhere</i>
+        <div class="card-body">
+            <h5 class="card-title">Offers</h5>
+        </div>
+        <ul class="list-group list-group-flush" style="width: 100%; height: 150px; overflow: auto">
+            {% for item in data.wishlist %}
+            {% if item.1 == 'ACCEPTED' %}
+            <div class="list-group-item"
+                style="background-color: #34e8eb; border: 2px solid black; border-radius: 20px; margin: 5px; color: black; font-weight: bold; box-shadow: 5px 10px; ;">
+                <span>{{ item.0 }}</span>
+                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#change_status_wishlist{{item.3}}"><i
+                        class="material-icons">sync_alt</i></a>
+                <div class="modal fade new-application-modal" id="change_status_wishlist{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Change Status of the Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/change_status_application" method="POST" id="change_status_application">
+
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="status_change">Change Status of the Application</label>
+                                        <select name="status_change" class="form-control" id="status_change">
+                                            <option value="TO_DO">Wishlist</option>
+                                            <option value="IN_PROCESS">In Process</option>
+                                            <option value="APPLIED">Applied</option>
+                                            <option selected value="ACCEPTED">Offers</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Change Status</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#edit_application{{item.3}}"><i
+                        class="material-icons">edit</i></a>
+                <div class="modal fade new-application-modal" id="edit_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Job Application</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                <form action="/edit_application" method="POST" id="edit_application{{item.3}}">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">Company Name</label>
+                                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                                            placeholder="Enter Company Name" required="required" value="{{item.0}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Location">Location</label>
+                                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                                            <option value="" disabled>Select your location</option>
+                                            <option value="Alabama" {{ 'selected' if item.4 == 'Alabama' else '' }}>Alabama</option>
+                                            <option value="Alaska" {{ 'selected' if item.4 == 'Alaska' else '' }}>Alaska</option>
+                                            <option value="Arizona" {{ 'selected' if item.4 == 'Arizona' else '' }}>Arizona</option>
+                                            <option value="Arkansas" {{ 'selected' if item.4 == 'Arkansas' else '' }}>Arkansas</option>
+                                            <option value="California" {{ 'selected' if item.4 == 'California' else '' }}>California</option>
+                                            <option value="Colorado" {{ 'selected' if item.4 == 'Colorado' else '' }}>Colorado</option>
+                                            <option value="Connecticut" {{ 'selected' if item.4 == 'Connecticut' else '' }}>Connecticut</option>
+                                            <option value="Delaware" {{ 'selected' if item.4 == 'Delaware' else '' }}>Delaware</option>
+                                            <option value="Florida" {{ 'selected' if item.4 == 'Florida' else '' }}>Florida</option>
+                                            <option value="Georgia" {{ 'selected' if item.4 == 'Georgia' else '' }}>Georgia</option>
+                                            <option value="Hawaii" {{ 'selected' if item.4 == 'Hawaii' else '' }}>Hawaii</option>
+                                            <option value="Idaho" {{ 'selected' if item.4 == 'Idaho' else '' }}>Idaho</option>
+                                            <option value="Illinois" {{ 'selected' if item.4 == 'Illinois' else '' }}>Illinois</option>
+                                            <option value="Indiana" {{ 'selected' if item.4 == 'Indiana' else '' }}>Indiana</option>
+                                            <option value="Iowa" {{ 'selected' if item.4 == 'Iowa' else '' }}>Iowa</option>
+                                            <option value="Kansas" {{ 'selected' if item.4 == 'Kansas' else '' }}>Kansas</option>
+                                            <option value="Kentucky" {{ 'selected' if item.4 == 'Kentucky' else '' }}>Kentucky</option>
+                                            <option value="Louisiana" {{ 'selected' if item.4 == 'Louisiana' else '' }}>Louisiana</option>
+                                            <option value="Maine" {{ 'selected' if item.4 == 'Maine' else '' }}>Maine</option>
+                                            <option value="Maryland" {{ 'selected' if item.4 == 'Maryland' else '' }}>Maryland</option>
+                                            <option value="Massachusetts" {{ 'selected' if item.4 == 'Massachusetts' else '' }}>Massachusetts</option>
+                                            <option value="Michigan" {{ 'selected' if item.4 == 'Michigan' else '' }}>Michigan</option>
+                                            <option value="Minnesota" {{ 'selected' if item.4 == 'Minnesota' else '' }}>Minnesota</option>
+                                            <option value="Mississippi" {{ 'selected' if item.4 == 'Mississippi' else '' }}>Mississippi</option>
+                                            <option value="Missouri" {{ 'selected' if item.4 == 'Missouri' else '' }}>Missouri</option>
+                                            <option value="Montana" {{ 'selected' if item.4 == 'Montana' else '' }}>Montana</option>
+                                            <option value="Nebraska" {{ 'selected' if item.4 == 'Nebraska' else '' }}>Nebraska</option>
+                                            <option value="Nevada" {{ 'selected' if item.4 == 'Nevada' else '' }}>Nevada</option>
+                                            <option value="New Hampshire" {{ 'selected' if item.4 == 'New Hampshire' else '' }}>New Hampshire</option>
+                                            <option value="New Jersey" {{ 'selected' if item.4 == 'New Jersey' else '' }}>New Jersey</option>
+                                            <option value="New Mexico" {{ 'selected' if item.4 == 'New Mexico' else '' }}>New Mexico</option>
+                                            <option value="New York" {{ 'selected' if item.4 == 'New York' else '' }}>New York</option>
+                                            <option value="North Carolina" {{ 'selected' if item.4 == 'North Carolina' else '' }}>North Carolina</option>
+                                            <option value="North Dakota" {{ 'selected' if item.4 == 'North Dakota' else '' }}>North Dakota</option>
+                                            <option value="Ohio" {{ 'selected' if item.4 == 'Ohio' else '' }}>Ohio</option>
+                                            <option value="Oklahoma" {{ 'selected' if item.4 == 'Oklahoma' else '' }}>Oklahoma</option>
+                                            <option value="Oregon" {{ 'selected' if item.4 == 'Oregon' else '' }}>Oregon</option>
+                                            <option value="Pennsylvania" {{ 'selected' if item.4 == 'Pennsylvania' else '' }}>Pennsylvania</option>
+                                            <option value="Rhode Island" {{ 'selected' if item.4 == 'Rhode Island' else '' }}>Rhode Island</option>
+                                            <option value="South Carolina" {{ 'selected' if item.4 == 'South Carolina' else '' }}>South Carolina</option>
+                                            <option value="South Dakota" {{ 'selected' if item.4 == 'South Dakota' else '' }}>South Dakota</option>
+                                            <option value="Tennessee" {{ 'selected' if item.4 == 'Tennessee' else '' }}>Tennessee</option>
+                                            <option value="Texas" {{ 'selected' if item.4 == 'Texas' else '' }}>Texas</option>
+                                            <option value="Utah" {{ 'selected' if item.4 == 'Utah' else '' }}>Utah</option>
+                                            <option value="Vermont" {{ 'selected' if item.4 == 'Vermont' else '' }}>Vermont</option>
+                                            <option value="Virginia" {{ 'selected' if item.4 == 'Virginia' else '' }}>Virginia</option>
+                                            <option value="Washington" {{ 'selected' if item.4 == 'Washington' else '' }}>Washington</option>
+                                            <option value="West Virginia" {{ 'selected' if item.4 == 'West Virginia' else '' }}>West Virginia</option>
+                                            <option value="Wisconsin" {{ 'selected' if item.4 == 'Wisconsin' else '' }}>Wisconsin</option>
+                                            <option value="Wyoming" {{ 'selected' if item.4 == 'Wyoming' else '' }}>Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="JobProfile">Job Profile</label>
+                                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                                            placeholder="Enter Job Profile" required="required" value="{{item.5}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Salary">Salary</label>
+                                        <input type="text" name="salary" class="form-control" id="Salary"
+                                            placeholder="Enter Salary" required="required" value="{{item.6}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Username">Username</label>
+                                        <input type="text" name="username" class="form-control" id="Username"
+                                            placeholder="Enter Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <input type="password" name="password" class="form-control" id="Password"
+                                            placeholder="Enter Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityQuestion">Security Question</label>
+                                        <input type="text" name="securityQuestion" class="form-control"
+                                            id="SecurityQuestion" placeholder="Enter Security Question">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SecurityAnswer">Security Answer</label>
+                                        <input type="text" name="securityAnswer" class="form-control"
+                                            id="SecurityAnswer" placeholder="Enter Security Answer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Notes">Notes</label>
+                                        <textarea class="form-control" id="Notes" name="notes"
+                                            placeholder="Save links and other information here">{{item.7}}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-date-input" class="col-3 col-form-label">Date
+                                            Applied</label>
+                                        <div class="col-10">
+                                            <input class="form-control" name="dateApplied" type="date"
+                                                value="{{item.2}}" id="example-date-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="status" name="status" type="hidden"
+                                            value="{{item.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#delete_application{{item.3}}"><i
+                        class="material-icons">delete</i></a>
+                <div class="modal fade new-application-modal" id="delete_application{{item.3}}" tabindex="-1"
+                    role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Delete Application</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="/delete_application" method="POST" id="delete_application">
+
+                                <div class="modal-body">
+                                    <div>Are you sure you want to delete the application {{item.0}}</div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="application_id" name="application_id"
+                                            type="hidden" value="{{item.3}}">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">Delete Application</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        <div class="card-body">
+            <a href="/view?show=accepted" class="card-link">View More</a>
+            <a href="#" class="card-link" data-toggle="modal" data-target="#offer">Add New</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal for New Application -->
+<div class="modal fade new-application-modal" id="wish" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New Job Application</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                <form action="/add_new_application" method="POST" id="add-new-application">
+                    <div class="form-group">
+                        <label for="exampleInputName">Company Name</label>
+                        <input type="password" name="companyName" class="form-control" id="exampleInputName"
+                            placeholder="Enter Company Name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                        <option value="" disabled selected>Select your location</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="JobProfile">Job Profile</label>
+                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                            placeholder="Enter Job Profile" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Salary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="Salary" placeholder="Enter Salary"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" class="form-control" id="Username"
+                            placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" class="form-control" id="Password"
+                            placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityQuestion">Security Question</label>
+                        <input type="text" name="securityQuestion" class="form-control" id="SecurityQuestion"
+                            placeholder="Enter Security Question">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityAnswer">Security Answer</label>
+                        <input type="text" name="securityAnswer" class="form-control" id="SecurityAnswer"
+                            placeholder="Enter Security Answer">
+                    </div>
+                    <div class="form-group">
+                        <label for="Notes">Notes</label>
+                        <textarea class="form-control" id="Notes" name="notes"
+                            placeholder="Save links and other information here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-3 col-form-label">Date Applied</label>
+                        <div class="col-10">
+                            <input class="form-control" name="dateApplied" type="date" value="2020-02-01"
+                                id="example-date-input">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="mr-4">Upload your CV:</label>
+                        <input type="file" name="file">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="status" name="status" type="hidden" value="TO_DO">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal for New Application -->
+<div class="modal fade new-application-modal" id="prog" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New Job Application</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                <form action="/add_new_application" method="POST" id="add-new-application">
+                    <div class="form-group">
+                        <label for="exampleInputName">Company Name</label>
+                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                            placeholder="Enter Company Name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="JobProfile">Job Profile</label>
+                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                            placeholder="Enter Job Profile" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Salary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="Salary" placeholder="Enter Salary"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" class="form-control" id="Username"
+                            placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" class="form-control" id="Password"
+                            placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityQuestion">Security Question</label>
+                        <input type="text" name="securityQuestion" class="form-control" id="SecurityQuestion"
+                            placeholder="Enter Security Question">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityAnswer">Security Answer</label>
+                        <input type="text" name="securityAnswer" class="form-control" id="SecurityAnswer"
+                            placeholder="Enter Security Answer">
+                    </div>
+                    <div class="form-group">
+                        <label for="Notes">Notes</label>
+                        <textarea class="form-control" id="Notes" name="notes"
+                            placeholder="Save links and other information here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-3 col-form-label">Date Applied</label>
+                        <div class="col-10">
+                            <input class="form-control" name="dateApplied" type="date" value="2020-02-01"
+                                id="example-date-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="status" name="status" type="hidden" value="IN_PROCESS">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="mr-4">Upload your CV:</label>
+                        <input type="file" name="file">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal for New Application -->
+<div class="modal fade new-application-modal" id="applied" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New Job Application</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                <form action="/add_new_application" method="POST" id="add-new-application">
+                    <div class="form-group">
+                        <label for="exampleInputName">Company Name</label>
+                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                            placeholder="Enter Company Name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="JobProfile">Job Profile</label>
+                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                            placeholder="Enter Job Profile" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Salary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="Salary" placeholder="Enter Salary"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" class="form-control" id="Username"
+                            placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" class="form-control" id="Password"
+                            placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityQuestion">Security Question</label>
+                        <input type="text" name="securityQuestion" class="form-control" id="SecurityQuestion"
+                            placeholder="Enter Security Question">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityAnswer">Security Answer</label>
+                        <input type="text" name="securityAnswer" class="form-control" id="SecurityAnswer"
+                            placeholder="Enter Security Answer">
+                    </div>
+                    <div class="form-group">
+                        <label for="Notes">Notes</label>
+                        <textarea class="form-control" id="Notes" name="notes"
+                            placeholder="Save links and other information here"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-3 col-form-label">Date Applied</label>
+                        <div class="col-10">
+                            <input class="form-control" name="dateApplied" type="date" value="2020-02-01"
+                                id="example-date-input">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="mr-4">Upload your CV:</label>
+                        <input type="file" name="file">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="status" name="status" type="hidden" value="APPLIED">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal for New Application -->
+<div class="modal fade new-application-modal" id="offer" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">New Job Application</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: left;">
+                <form action="/add_new_application" method="POST" id="add-new-application">
+                    <div class="form-group">
+                        <label for="exampleInputName">Company Name</label>
+                        <input type="text" name="companyName" class="form-control" id="exampleInputName"
+                            placeholder="Enter Company Name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Location">Location</label>
+                        <select name="location" id="Location" class="form-control" style="height: 3em; width: 20em; border: none; font-size: 1em;" required>
+                            <option value="" disabled selected>Select your location</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="JobProfile">Job Profile</label>
+                        <input type="text" name="jobProfile" class="form-control" id="JobProfile"
+                            placeholder="Enter Job Profile" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Salary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="Salary" placeholder="Enter Salary"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" class="form-control" id="Username"
+                            placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" class="form-control" id="Password"
+                            placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityQuestion">Security Question</label>
+                        <input type="text" name="securityQuestion" class="form-control" id="SecurityQuestion"
+                            placeholder="Enter Security Question">
+                    </div>
+                    <div class="form-group">
+                        <label for="SecurityAnswer">Security Answer</label>
+                        <input type="text" name="securityAnswer" class="form-control" id="SecurityAnswer"
+                            placeholder="Enter Security Answer">
+                    </div>
+                    <div class="form-group">
+                        <label for="Notes">Notes</label>
+                        <textarea class="form-control" id="Notes" name="notes"
+                            placeholder="Save links and other information here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-date-input" class="col-3 col-form-label">Date Applied</label>
+                        <div class="col-10">
+                            <input class="form-control" name="dateApplied" type="date" value="2020-02-01"
+                                id="example-date-input">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="mr-4">Upload your CV:</label>
+                        <input type="file" name="file">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="status" name="status" type="hidden" value="ACCEPTED">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+        
+          
