@@ -1,5 +1,7 @@
 <h1 align= "left"><b>WolfTrackPlus</b></h1>
 
+![image](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/job-app-tracker.jpg?raw=true)
+
 ### WolfTrack your job application tracker
 
 <h3> Are you struggling to track job applications? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
