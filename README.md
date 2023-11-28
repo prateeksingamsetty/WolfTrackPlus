@@ -14,26 +14,6 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 
 ### Version Tags
 
-**Version 1 tags:**<br/>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![DOI](https://zenodo.org/badge/408669082.svg)](https://zenodo.org/badge/latestdoi/408669082)
-[![GitHub Release](https://img.shields.io/github/release/Himanshuu-Gupta/WolfTrack)](https://github.com/Himanshuu-Gupta/WolfTrack/releases/tag/wolftrack)
-[![Build Status](https://app.travis-ci.com/Himanshuu-Gupta/WolfTrack.svg?branch=main)](https://app.travis-ci.com/Himanshuu-Gupta/WolfTrack)
-
-**Version 2 tags:**<br/>
-
-[![DOI](https://zenodo.org/badge/418295938.svg)](https://zenodo.org/badge/latestdoi/418295938)
-[![GitHub Release](https://img.shields.io/github/release/ArpithaVijayakumar/WolfTrack)](https://github.com/ArpithaVijayakumar/WolfTrack/releases/tag/wolftrack)
-![Python](https://img.shields.io/badge/python-v3.8+-yellow.svg)
-![GitHub issues](https://img.shields.io/github/issues/ArpithaVijayakumar/WolfTrack)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/ArpithaVijayakumar/WolfTrack)
-![Lines of code](https://img.shields.io/tokei/lines/github/ArpithaVijayakumar/WolfTrack)
-[![Build Status](https://app.travis-ci.com/UnnatiPrema/WolfTrackPlus.svg?branch=main)](https://app.travis-ci.com/UnnatiPrema/WolfTrackPlus)
-[![codecov](https://codecov.io/gh/ArpithaVijayakumar/WolfTrackPlus/branch/main/graph/badge.svg?token=h4F94IJMzj)](https://codecov.io/gh/ArpithaVijayakumar/WolfTrackPlus)
-
-**Version 3 Tags:** <br/>
-
 [![DOI](https://zenodo.org/badge/428888852.svg)](https://zenodo.org/badge/latestdoi/428888852)
 ![Python](https://img.shields.io/badge/python-v3.8+-green.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
