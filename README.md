@@ -27,7 +27,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
 [![Close as a feature](https://github.com/prateeksingamsetty/Simplii/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/close_as_a_feature.yml)
 [![Lint Python](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml)
-[![codecov](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus/branch/main/graph/badge.svg?token=Sfdls5yVnN)](https://codecov.io/gh/ramyasaimullapudi/WolfTrackPlus)
+![Code Coverage](https://github.com/prateeksingamsetty/WolfTrackPlus/blob/prateek_temp/Project3/Assets/coverage.svg)
 [![Documentation Status](https://readthedocs.org/projects/wolftrackplus/badge/?version=latest)](https://wolftrackplus.readthedocs.io/en/latest/?badge=latest)
 
 
