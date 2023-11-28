@@ -42,6 +42,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/prateeksingamsetty/WolfTrackPlus)
 ![GitHub open issues](https://img.shields.io/github/issues/prateeksingamsetty/WolfTrackPlus)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/prateeksingamsetty/WolfTrackPlus)
+[![GitHub version](https://img.shields.io/github/v/release/prateeksingamsetty/WolfTrackPlus)](https://github.com/prateeksingamsetty/WolfTrackPlus/releases)
 [![Python Style Checker](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/style_checker.yml)
 ![GitHub all downloads](https://img.shields.io/github/downloads/ramyasaimullapudi/WolfTrackPlus/total)
 [![Lint Python](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml/badge.svg)](https://github.com/prateeksingamsetty/WolfTrackPlus/actions/workflows/syntax_checker.yml)
