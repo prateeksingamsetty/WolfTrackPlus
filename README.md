@@ -2,9 +2,11 @@
 
 ### WolfTrack your job application tracker
 
-[Project 1 - Link](https://youtu.be/Z_OqqHXdwJ0)
+<h3>Are you struggling to track job application? WolfTrack keep track of them, with all new WolfTrackPlus!!! </h3>
 
-[Project 2 - Link](https://youtu.be/12VUntGWZys)
+Looking for a seamless way to manage your job search? Our Job Application Tracker is your one-stop solution to streamline and organize the entire job application process. No more scattered notes, missed deadlines, or forgotten details – stay on top of your career journey with ease. Say goodbye to the hassle of managing multiple spreadsheets or forgetting important details. With our Job Application Tracker, take control of your job search journey and pave the way for a more organized and successful career transition. Start tracking, start succeeding.
+
+### Link to Demonstration Video of the Project: 
 
 [Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
 
