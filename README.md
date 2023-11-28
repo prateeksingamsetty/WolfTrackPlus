@@ -13,7 +13,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 # Table of Contents  
 
 - [WolfTrackPlus](#WolfTrackPlus)
-- [WolfTrack your job application tracker]
+- [WolfTrack your job application tracker](#WolfTrack-your-job-application-tracker)
 - [Built with:](#built-with)
 - [Version Tags](#Version-Tags)
 - [Project Overview](#Project-Overview)
@@ -27,7 +27,6 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
   - [Job Apply Feature](#Job-Apply-Feature)
   - [All Job Applications Locations Display](#All-Job-Applications-Locations-Display)
   - [Email Notifiications](#Email-Notifiications)
- 
 - [Contact](#Contact)
 - [Contributors](#Contributors)
 - [Contribution](#Contribution)
