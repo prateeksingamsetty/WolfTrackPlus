@@ -1,62 +1,159 @@
-class FlaskTest:
-    """
-    It is the subject body to write all unit testcases for login page
-    """
+"""
+MIT License
+
+Copyright (c) 2023 Shiva Vara Prasad Kandhagatla, Prateek Singamsetty, Laasya Choudary Nandamuri, Jayanth Ramanidharan
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
 
 
-def test_index(self):
-    """
-    test checks if login page is successfully
-    @return: status code 308 if successfull
-    """
+from main import app
+from unittest.main import main
+from flask import app
+from flask.typing import StatusCode
+import unittest
+import sys
+import os
+import inspect
+
+currentdir = os.path.dirname(os.path.abspath(
+    inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
 
 
-def test_index_content(self):
-    """
-    test checks if login page is returning html/json file while executing and authenticating login
-    """
+class FlaskTest(unittest.TestCase):
+
+    # check if response is 200
+    def test_index(self):
+        tester = app.test_client(self)
+        response = tester.get("/login")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)
+
+    # check if content returned is application/json
+    def test_index_content(self):
+        tester = app.test_client(self)
+        response = tester.get("/login")
+        self.assertEqual(response.content_type, "text/html; charset=utf-8")
+
+    # check data returned
+    def test_valid_email(self):
+        tester = app.test_client(self)
+        response = tester.post(
+            "/loginUser", data={"username": "wrongformat.com", "password": "password"}
+        )
+        print(response)
+        self.assertEqual(response.status_code, 200)
+
+    def test_validate_credentials(self):
+        tester = app.test_client(self)
+        response = tester.post(
+            "/loginUser", data={"username": "test@gmail.com", "password": "pasword"}
+        )
+        print(response)
+        self.assertEqual(response.status_code, 200)
+
+    def test_validate_credentials(self):
+        tester = app.test_client(self)
+        response = tester.post(
+            "/loginUser", data={"username": "test@gmail.com", "password": "password"}
+        )
+        self.assertEqual(response.status_code, 200)
+
+    def test_repeated_signup(self):
+        tester = app.test_client(self)
+        response = tester.post(
+            "/signup",
+            data={
+                "username": "test@gmail.com",
+                "password": "password",
+                "name": "test",
+                "gender": "Female",
+                "location": "Raleigh",
+            },
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_new_application(self):
+        with app.test_client(self) as c:
+            with c.session_transaction() as sess:
+                sess["email"] = "test@gmail.com"
+                sess["password"] = "password"
+        response = c.post(
+            "/add_new_application",
+            data={
+                "companyName": "ANB",
+                "location": "Seattle",
+                "jobProfile": "Software Engineer",
+                "salary": 80000,
+                "securityQuestion": "What is the name of your first dog?",
+                "securityAnswer": "Tommy",
+                "dateApplied": "2021-02-01",
+                "notes": "Check back in 2 weeks",
+                "username": "abc@adobe.com",
+                "password": "password1",
+            },
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_edit_application(self):
+        with app.test_client(self) as c:
+            with c.session_transaction() as sess:
+                sess["email"] = "swetha1189@gmail.com"
+                sess["password"] = "thanks123"
+        response = c.post(
+            "/edit_application",
+            data={
+                "companyName": "ANB",
+                "location": "Seattle",
+                "jobProfile": "Software Engineer",
+                "salary": 80000,
+                "securityQuestion": "What is the name of your first dog?",
+                "securityAnswer": "Tommy",
+                "dateApplied": "2021-02-01",
+                "notes": "Check back in 2 weeks",
+                "username": "abc@adobe.com",
+                "password": "password1",
+            },
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_edit_profile(self):
+        with app.test_client(self) as c:
+            with c.session_transaction() as sess:
+                sess["email"] = "shivakandhagatla1999@gmail.com"
+                sess["password"] = "12345"
+        response = c.post(
+            "/edit_profile", data={"name": "sravya", "location": "Seattle"}
+        )
+        self.assertEqual(response.status_code, 400)
+
+    def test_edit_profile(self):
+        with app.test_client(self) as c:
+            with c.session_transaction() as sess:
+                sess["email"] = "shivakandhagatla1999@gmail.com"
+                sess["password"] = "12345"
+        response = c.post(
+            "/edit_profile", data={"name": "Ramya Sai Mullapudi", "location": "NC"}
+        )
+        self.assertEqual(response.status_code, 400)
 
 
-def test_valid_email(self):
-    """
-    test checks if the email used for login already exists.
-    It also checks the username and password are entered correctly during login
-    @return: 200 if email is within database and password is correct
-    """
-
-
-def test_validate_credentials(self):
-    """
-    test checks if the username and password used for login are entered correctly during login
-    @return: 200 if username and password are correct.
-    """
-
-
-def test_repeated_signup(self):
-    """
-    tests whether duplicate sign up of the same email id is avoided.
-    @return: 400 and no duplicate will be created
-    """
-
-
-def test_new_application(self):
-    """
-    test checks if a new application is created correctly with entered information
-    @param appplication_features: email, company_name,location, job_profile,salary,username,password,security_question,security_answer,notes,date_applied,status,):
-    @return: 400 if successfully created a new application
-    """
-
-
-def test_edit_application(self):
-    """
-    it verifies valid credentials for the application being edited, then creates session
-    The application paramrters will be updates to the respective application_id within database and website
-    @return: 400 if successfully updated an existing application
-    """
-
-
-def test_edit_profile(self):
-    """
-    test checks if any modification to profile information is updated successfully.
-    @return: 400 if successfully updated an existing user profile
-    """
+if __name__ == "__main__":
+    unittest.main()
