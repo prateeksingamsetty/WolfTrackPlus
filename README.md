@@ -10,6 +10,30 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 
 [Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
 
+# Table of Contents  
+
+- [WolfTrackPlus](#WolfTrackPlus)
+- [WolfTrack your job application tracker]
+- [Built with:](#built-with)
+- [Version Tags](#Version-Tags)
+- [Project Overview](#Project-Overview)
+- [Getting started:](#Getting-started)
+- [Third-Party Tools](#Third-Party-Tools)
+- [Enhancements](#enhancements)
+  - [Preview](#Preview)
+  - [Sign Up Page](#Sign-Up-Page)
+  - [Login Page](#Login-Page)
+  - [Dashboard](#Dashboard)
+  - [Job Apply Feature](#Job-Apply-Feature)
+  - [All Job Applications Locations Display](#All-Job-Applications-Locations-Display)
+  - [Email Notifiications](#Email-Notifiications)
+ 
+- [Contact](#Contact)
+- [Contributors](#Contributors)
+- [Contribution](#Contribution)
+- [License](#license)
+
+
 ### Version Tags
 
 **Version 1 tags:**<br/>
@@ -185,49 +209,6 @@ An email is sent when a new account is created, new job application is submitted
 ![image](https://github.com/salonishah01/WolfTrackPlus/assets/59621149/f8b8bcab-52b8-458e-a833-1670067c2eda)
 
 ![image](https://github.com/salonishah01/WolfTrackPlus/assets/59621149/03da603c-d8cc-482e-92ba-787dac032183)
-
-
-
-
-
-### Phase 1:
-
-- [x] Create database ER diagram
-- [x] Create SQL DML and DDL queries
-- [x] Create Dashboard Page
-- [x] Create Login Page
-- [x] Create Signup Page
-- [x] Setup Flask
-- [x] Add Unit testing
-- [x] Add Error Handling mechanisms
-- [x] Mock of Job Application Map using Power BI
-
-### Phase 2:
-
-- [x] Integrating Components to create a complete workflow
-- [x] Revamped database design following ACID properties
-- [x] Added validations to user input for Login, Signup and Add Application 
-- [x] Added style checkers which were not existing before
-- [x] Made UI to be more reactive by enforcing the user to enter required fields
-- [x] Create APIs for relevant functionalities
-
-### Phase3:
-For more detailed description - Check [Changes.md](https://github.com/ramyasaimullapudi/WolfTrackPlus/blob/main/docs/Changes.md)
-- [x] Editing an application
-- [x] Change the application status
-- [x] Delete an application
-- [x] Added scrollbar for job listings on dashboard
-- [x] Edit the user profile
-- [x] Auto documentation for the project using Sphinx
-- [x] Email reminders for application creation and modification
-- [x] Format checkers implemented
-- [x] Hosted the website - http://rjprabhu.pythonanywhere.com/
-   
-### Phase4:
-- [ ] Display the location of the application on the map
-- [ ] Share your profile with others
-- [ ] Reading mails from your inbox and automatically adding/updating the status of the application
-- [ ] Enabling Desktop Notifications
 
 
 ## Contact 
