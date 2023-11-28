@@ -8,7 +8,7 @@ Looking for a seamless way to manage your job search? Our Job Application Tracke
 
 ### Link to Demonstration Video of the Project: 
 
-[Project 3 - Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
+[Project 3 - Youtube Link](https://www.youtube.com/watch?v=7mjmc1x7qTE)
 
 # Table of Contents  
 
