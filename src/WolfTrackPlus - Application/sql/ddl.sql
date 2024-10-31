@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `wolftrack_se`.`application` (
   `user_id` INT NOT NULL,
   `company_id` INT NOT NULL,
   `role_id` INT NOT NULL,
-  `application_date` TIMESTAMP NOT NULL,
+  `application_date` VARCHAR(20) NOT NULL,
   `job_description` VARCHAR(100) NULL,
   `salary` FLOAT NULL,
   `location` VARCHAR(45) NOT NULL,
