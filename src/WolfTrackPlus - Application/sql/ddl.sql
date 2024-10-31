@@ -108,6 +108,18 @@ CREATE TABLE IF NOT EXISTS `wolftrack_se`.`application` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `wolftrack_se`.`password_reset`
+-- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `wolftrack_se`.`password_reset` ;
+
+CREATE TABLE IF NOT EXISTS `wolftrack_se`.`password_reset` (
+  `email` VARCHAR(45) NOT NULL,
+  `code` INT NOT NULL,
+  PRIMARY KEY (`email`))
+ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
