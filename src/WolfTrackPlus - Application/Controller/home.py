@@ -9,6 +9,7 @@ from Controller.user_controller import User
 from Controller.application_controller import Application
 from Controller.email_framework import *
 from Controller.geocoding_helper import get_location_coordinates
+from collections import Counter
 import requests
 
 api_key = '68188bd34eea4250107ae82ee6d61054'
@@ -73,6 +74,30 @@ def auth():
         all_companies = application.get_job_companies_for_applications(session["email"])
         print("all_job_locations",all_job_locations)
         print("all_companies",all_companies)
+
+        # data["wishlist"] is a list of lists, where i[2] is the application_date
+        dates = [i[2] for i in data["wishlist"]]
+        months = []
+        for date_str in dates:
+            try:
+                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+                month_str = date_obj.strftime('%Y-%m')
+                months.append(month_str)
+            except ValueError as e:
+                print(f"Error parsing date '{date_str}': {e}")
+
+        # Count applications per month
+        month_counts = Counter(months)
+
+        # Prepare data for the chart (sorted chronologically)
+        sorted_months = sorted(month_counts.keys())
+        application_data = [{
+            'month': month,
+            'application_count': month_counts[month]
+        } for month in sorted_months]
+
+        print("Application Data:  ", application_data )
+
         # Fetch coordinates for each location
         coordinates_list = []
         for location in all_job_locations:
@@ -82,7 +107,6 @@ def auth():
 
         print("coordinates_list",coordinates_list)
 
-
        
         upcoming_events = fetch_upcoming_events_temp()
         return render_template(
@@ -91,7 +115,8 @@ def auth():
             upcoming_events=upcoming_events,
             all_job_locations=json.dumps(all_job_locations),
             coordinates_list=json.dumps(coordinates_list),
-            all_companies=json.dumps(all_companies)
+            all_companies=json.dumps(all_companies),
+            application_data=application_data
         )
     else:
         return redirect("/login")
