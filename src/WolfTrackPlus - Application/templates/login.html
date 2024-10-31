@@ -11,11 +11,11 @@
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/login.js') }}"></script>
-
+    
   </head>
 
 <body>
-
+  
   <div class="container">
     <input type="checkbox" id="flip">
     <div class="cover">
@@ -51,21 +51,18 @@
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input id="login-password" name='password' type="password" placeholder="Enter your password" required>
+                <input id="login-password"name='password' type="password" placeholder="Enter your password" required>
               </div>
               <div id="login-error"><p class="text-red">{{loginError}}</p></div>
               <div class="button input-box">
                 <input type="submit" value="Submit">
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
-                <div class="text sign-up-text forgot-text">
-                    <a href="/forgot">Forgot password</a>
-                </div>
             </div>
         </form>
       </div>
         <div class="signup-form">
-
+          
           <div class="title">Signup</div>
           <form name="signupForm" action="/signup" method="post">
             <div class="input-boxes">
@@ -85,7 +82,7 @@
                 <div>
                     <div class="input-group mb-3">
                         <select class="custom-select" name="gender" id="gender" style="height:3em;width:20em;border: none;font-size: 1em;">
-                          <option value="" disabled selected>Gender</option>
+                          <option value="" disabled selected>Gender</option>  
                           <option value="Female">Female</option>
                             <option value="Male">Male</option>
                             <option value="Non-binary">Non-binary</option>
@@ -93,7 +90,7 @@
                     </div>
                 </div>
                 <div class="input-box">
-
+                  
                   <select name="location" id="location" style="height: 3em; width: 20em; border: none; font-size: 1em;">
                         <option value="" disabled selected>Select your location</option>
                         <option value="Alabama">Alabama</option>
@@ -154,7 +151,7 @@
                 <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
         </form>
-
+        
     </div>
     </div>
     </div>

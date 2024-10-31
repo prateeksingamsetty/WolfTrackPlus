@@ -31,30 +31,6 @@ END$$
 
 DELIMITER ;
 
-DELIMITER //
-
-CREATE PROCEDURE UpdateUserPassword(
-    IN p_email VARCHAR(45),
-    IN p_new_password VARCHAR(45)
-)
-BEGIN
-    DECLARE v_user_id INT;
-
-    SELECT user_id INTO v_user_id
-    FROM user
-    WHERE email = p_email;
-
-    IF v_user_id IS NOT NULL THEN
-        UPDATE user_login
-        SET password = p_new_password
-        WHERE user_id = v_user_id;
-    ELSE
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'User not found';
-    END IF;
-END //
-
-DELIMITER ;
-
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`role_id`, `role`) VALUES (1,'SDE I');

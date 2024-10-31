@@ -107,26 +107,6 @@ class user_dao:
             data["user_id"] = result[0][1]
         return data
 
-    def get_user_existence(self, email):
-        """
-        Looks for the authenticated user into the WolfTrackPlus portal, and fetches their details.
-
-        Args:
-            email (string): Email identifier of the user.
-
-        Returns:
-            array[]: Returns an array/list of user details - full name, gender, location, user id.
-        """
-        data = {}
-        result = self.__db.run_query(
-            "SELECT count(*) FROM user WHERE email='"
-            + email
-            + "'"
-        )
-        if result[0][0] == 0:
-            return 0
-        return 1
-
     def get_user_id(self, email):
         """
         Gets the user ID from given email.

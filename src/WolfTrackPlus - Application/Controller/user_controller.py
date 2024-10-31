@@ -27,14 +27,6 @@ class User(Resource):
         """
         return self.user.get_user(email, password)
 
-    def get_user_existence(self, email):
-        """
-        Checks if the user is existing using the param
-        :param email: email of the user
-        :return: checks if the user is authenticated
-        """
-        return self.user.get_user_existence(email)
-
     # @auth
     def get_auth_user_dao(self, email):
         """
