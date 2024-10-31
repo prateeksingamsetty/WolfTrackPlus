@@ -7,10 +7,12 @@ from flask_login import login_required, logout_user, login_manager
 from werkzeug.utils import redirect
 from Controller.user_controller import User
 from Controller.application_controller import Application
+from Controller.password_reset_controller import PasswordReset
 from Controller.email_framework import *
 from Controller.geocoding_helper import get_location_coordinates
 from collections import Counter
 import requests
+import random
 
 api_key = '68188bd34eea4250107ae82ee6d61054'
 app_id = '394232b1'
@@ -28,6 +30,7 @@ home_route = Blueprint("home_route", __name__)
 
 user = User()
 application = Application()
+password_reset = PasswordReset()
 # login = login_manager.LoginManager(application)
 
 
@@ -59,6 +62,10 @@ def fetch_upcoming_events_temp():
 @home_route.route("/login", methods=["GET", "POST"])
 def login():
     return render_template("login.html", loginError="")
+
+@home_route.route("/forgot", methods=["GET", "POST"])
+def forgot():
+    return render_template("forgot.html", loginError="")
 
 
 @home_route.route("/auth", methods=["GET"])
@@ -120,6 +127,49 @@ def auth():
         )
     else:
         return redirect("/login")
+
+
+@home_route.route("/forgotPassword", methods=["POST"])
+def forgotPassword():
+    """
+    When encountering the /forgotPassword url, this is function is called. it intercepts post requests.
+    if received a post request, it checks if the email is valid.
+    If the email is valid then the user receives a code page is redirected login page.
+    """
+    session["email"] = request.form["username"]
+    result = user.get_user_existence(session["email"])
+    if result == 0:
+        error = "Email does not exist. Please enter a valid email."
+        return render_template("forgot.html", forgotError=error)
+    else:
+        code = random.randint(1111, 9999)
+        res = password_reset.upsert(session["email"], code)
+        password_reset_email(session["email"], code)
+        return render_template("forgot.html", codeSent="yes", email=session["email"])
+
+
+@home_route.route("/passwordReset", methods=["POST"])
+def passwordReset():
+    email = request.form.get("username")
+    code = request.form.get("resetCode")
+    newPassword = request.form.get("newPassword")
+    actual_code = password_reset.get_code(email)
+
+    if actual_code is None:
+        error = "Some error occurred. Please try again."
+        return redirect('/login', loginError=error)
+
+    if int(actual_code) == int(code):
+        if newPassword is None:
+            error = "Enter a valid password"
+            return render_template("forgot.html", codeSent="yes", email=session["email"], forgotError=error)
+        else:
+            successful_reset_email(email)
+            password_reset.update_password(email, newPassword)
+            return redirect('/login', successMessage="Your password has been successfully reset.")
+    else:
+        error = "Incorrect code"
+        return render_template("forgot.html", codeSent="yes", email=session["email"], forgotError=error)
 
 
 @home_route.route("/loginUser", methods=["GET", "POST"])
