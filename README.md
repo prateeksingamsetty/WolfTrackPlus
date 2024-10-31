@@ -201,10 +201,9 @@ In case of any issues, please e-mail your queries to shivakandhagatla1999@gmail.
  ## Contributors
    
   <ul style="list-style-type:  '- ' ; padding: 0;">
-  <li><a href="https://github.com/shiva1239" style="text-decoration: none; color: black;">Shiva Vara Prasad Kandhagatla</a></li>
-  <li><a href="https://github.com/prateeksingamsetty" style="text-decoration: none; color: black;">Prateek Singamsetty</a></li>
-  <li><a href="https://github.com/laasya2704" style="text-decoration: none; color: black;">Laasya Choudary Nandamuri </a></li>
-  <li><a href="https://github.com/jramani" style="text-decoration: none; color: black;">Jayanth Ramanidharan</a></li>
+  <li><a href="https://github.com/dinesh-pasupuleti" style="text-decoration: none; color: black;">Dinesh Pasupuleti</a></li>
+  <li><a href="https://github.com/srivardhanvura" style="text-decoration: none; color: black;">Srivardhan Vura</a></li>
+  <li><a href="https://github.com/jayjoshi1400" style="text-decoration: none; color: black;">Jay Joshi</a></li>
 </ul>
 
  ## Contribution
