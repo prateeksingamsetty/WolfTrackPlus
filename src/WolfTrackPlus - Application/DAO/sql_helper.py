@@ -21,10 +21,10 @@ class sql_helper:
         try:
             self.connection_obj = pymysql.connect(
                 # host="http://database-1.cjzkwewltsjb.us-east-2.rds.amazonaws.com",
-                host="database-1.cert8noaobae.us-east-2.rds.amazonaws.com",
+                host="wolftrakcplus.cz0o608agr58.us-east-1.rds.amazonaws.com",
                 port=3306,
                 user="admin",
-                password="admin123",
+                password="SEproject2024",
                 db="wolftrack_se",
                 autocommit=True,
             )
