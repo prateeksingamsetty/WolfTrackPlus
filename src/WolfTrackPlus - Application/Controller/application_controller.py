@@ -39,6 +39,18 @@ class Application(Resource):
         """
         return self.application.get_company_names_for_application(email)
 
+    def get_resume(self, email):
+        """
+        Gets the resume for the specified user.
+
+        Args:
+            email (string): Email of the user
+
+        Returns:
+            bytes: The resume binary data if found, None otherwise
+        """
+        return self.application.get_resume(email)
+
     # @login_required
     def post(
         self,
@@ -54,6 +66,7 @@ class Application(Resource):
         notes,
         date_applied,
         status,
+        resume,
     ):
         """
         Obtains stock information from the given url.
@@ -61,6 +74,7 @@ class Application(Resource):
         :param url: URL of the product
         :return: a string indicating the stock information and a string indicating cost of the product
         """
+        # print(resume)
         return self.application.add_application(
             email,
             company_name,
@@ -74,6 +88,7 @@ class Application(Resource):
             notes,
             date_applied,
             status,
+            resume,
         )
 
     def change_status(self, status, application_id):
