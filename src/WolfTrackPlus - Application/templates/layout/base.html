@@ -132,6 +132,17 @@
 
 
             </div>
+
+            <!-- Chart Card View -->
+<div class="card mt-4">
+  <div class="card-header">
+    <h5 class="card-title mb-0">Applications Per Month</h5>
+  </div>
+  <div class="card-body">
+    <canvas id="applicationsChart"></canvas>
+  </div>
+</div>
+
           </div>
 
           <br><br>
@@ -278,10 +289,58 @@
 
 
 
-
-
-
         </div>
+<!-- Include Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Pass application_data to JavaScript -->
+<script>
+    const applicationData = {{ application_data | tojson }};
+</script>
+
+<!-- Script to Render the Chart -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (applicationData && applicationData.length > 0) {
+      // Extract months and counts
+      const months = applicationData.map(item => {
+        const [year, month] = item.month.split('-');
+        const date = new Date(year, month - 1);
+        return date.toLocaleString('default', { month: 'short', year: 'numeric' });
+      });
+      const applicationCounts = applicationData.map(item => item.application_count);
+
+      // Render the Chart
+      const ctx = document.getElementById('applicationsChart').getContext('2d');
+      const applicationsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: months,
+          datasets: [{
+            label: 'Number of Applications',
+            data: applicationCounts,
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                precision: 0  // Ensure integer values on y-axis
+              }
+            }
+          }
+        }
+      });
+    } else {
+      console.log('No application data available to display.');
+    }
+  });
+</script>
 
 
 </body>
