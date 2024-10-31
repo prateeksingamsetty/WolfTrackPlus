@@ -17,6 +17,9 @@ body{
 .text-red{
   color:#FF0000;
 }
+.text-green{
+  color:#00FF00;
+}
 .container{
   position: relative;
   max-width: 850px;
@@ -108,7 +111,9 @@ body{
   justify-content: space-between;
 }
 .form-content .login-form,
-.form-content .signup-form{
+.form-content .signup-form,
+.forgot-form
+{
   width: calc(100% / 2 - 25px);
 }
 .forms .form-content .title{
@@ -207,7 +212,8 @@ body{
     display: none;
   }
   .form-content .login-form,
-  .form-content .signup-form{
+  .form-content .signup-form,
+  .forgot-form{
     width: 100%;
   }
   .form-content .signup-form{
