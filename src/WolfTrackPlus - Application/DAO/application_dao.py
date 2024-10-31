@@ -64,26 +64,27 @@ class application_dao:
         )[0][0]
 
         return self.__db.run_query(
-            "INSERT INTO application (user_id, company_id, role_id, application_date, job_description, salary, location, status, imortant_links) values ("
-            + str(userId)
-            + ", "
-            + str(companyId)
-            + ", "
-            + str(roleId)
-            + ", "
-            + date_applied
-            + ", '"
-            + job_profile
-            + "', "
-            + str(salary)
-            + ", '"
-            + location
-            + "', '"
-            + status
-            + "', '"
-            + notes
-            + "');"
-        )
+    "INSERT INTO application (user_id, company_id, role_id, application_date, job_description, salary, location, status, imortant_links) VALUES ("
+    + str(userId)
+    + ", "
+    + str(companyId)
+    + ", "
+    + str(roleId)
+    + ", '"
+    + date_applied
+    + "', '"
+    + job_profile
+    + "', "
+    + str(salary)
+    + ", '"
+    + location
+    + "', '"
+    + status
+    + "', '"
+    + notes
+    + "');"
+)
+
 
     def get_application(self, email, application_status):
         """
