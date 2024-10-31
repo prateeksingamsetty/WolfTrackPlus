@@ -145,6 +145,73 @@ def status_change_email(application_id, email, status):
 
     return True
 
+def password_reset_email(email, code):
+
+    sender_email = "wolftrackproject@gmail.com"
+    receiver_email = email
+    password = "dlafyfekdkmdfjdi"
+
+    subject = "WolfTrack++ - Password Reset"
+    body = (
+        "WOLFTRACK++ PASSWORD RESET CODE \n\n"
+        "The code to reset your password is: "
+        + str(code)
+        + "\n\n"
+        + "Get back to the application and enter the code to reset your password"
+        + "\n\n"
+        "Please reply back to this mail if you have any queries!\n"
+        "The WolfTrack++ Team."
+    )
+    message = MIMEMultipart()
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    message["Subject"] = subject
+    message["Bcc"] = receiver_email
+
+    message.attach(MIMEText(body, "plain"))
+
+    text = message.as_string()
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, text)
+
+    return True
+
+def successful_reset_email(email):
+
+    sender_email = "wolftrackproject@gmail.com"
+    receiver_email = email
+    password = "dlafyfekdkmdfjdi"
+
+    subject = "WolfTrack++ - Password has been reset"
+    body = (
+        "WOLFTRACK++ PASSWORD RESET DONE \n\n"
+        "Your password has been successfully reset."
+        + "\n\n"
+        + "Now you can log in to your account using your new password."
+        + "\n\n"
+        "Please reply back to this mail if you have any queries!\n"
+        "The WolfTrack++ Team."
+    )
+    message = MIMEMultipart()
+    message["From"] = sender_email
+    message["To"] = receiver_email
+    message["Subject"] = subject
+    message["Bcc"] = receiver_email
+
+    message.attach(MIMEText(body, "plain"))
+
+    text = message.as_string()
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver_email, text)
+
+    return True
+
 
 if __name__ == "__main__":
     status_change_email("1", "swetha11895@gmail.com", "In Review")
